@@ -480,7 +480,7 @@
 
         ru_sl {
             bindings = <&alt_slash_ru>;
-            key-positions = <23 24>;
+            key-positions = <24 25>;
         };
 
         c_s {
@@ -567,21 +567,6 @@
     };
 
     macros {
-        gif: gif {
-            label = "giphy";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp N2>,
-                <&macro_release>,
-                <&kp LSHFT>,
-                <&macro_tap>,
-                <&kp G &kp I &kp F>;
-        };
-
         KB_EN: KB_EN {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -625,8 +610,8 @@
             #binding-cells = <0>;
             bindings =
                 <&KB_EN>,
-                <&macro_wait_time 10>,
-                <&kp DLLR>,
+                <&macro_wait_time 20>,
+                <&kp LS(NUMBER_4)>,
                 <&macro_wait_time 10>,
                 <&KB_RU>;
 
@@ -664,7 +649,7 @@
             #binding-cells = <0>;
             bindings =
                 <&KB_EN>,
-                <&macro_wait_time 10>,
+                <&macro_wait_time 20>,
                 <&kp TILDE>,
                 <&macro_wait_time 10>,
                 <&KB_RU>;
@@ -677,7 +662,7 @@
             #binding-cells = <0>;
             bindings =
                 <&KB_EN>,
-                <&macro_wait_time 10>,
+                <&macro_wait_time 20>,
                 <&kp GRAVE>,
                 <&macro_wait_time 10>,
                 <&KB_RU>;
@@ -889,7 +874,7 @@
             #binding-cells = <0>;
             bindings =
                 <&KB_EN>,
-                <&macro_wait_time 10>,
+                <&macro_wait_time 20>,
                 <&kp SQT>,
                 <&macro_wait_time 10>,
                 <&KB_RU>;
@@ -902,8 +887,8 @@
             #binding-cells = <0>;
             bindings =
                 <&KB_EN>,
-                <&macro_wait_time 10>,
-                <&kp AMPERSAND>,
+                <&macro_wait_time 20>,
+                <&kp LS(N7)>,
                 <&macro_wait_time 10>,
                 <&KB_RU>;
 
