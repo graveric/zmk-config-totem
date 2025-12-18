@@ -291,7 +291,7 @@
         up_dot_ru: up_dot_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "UP_DOT_RU";
-            bindings = <&ru_dot>, <&kp RU_SEMICOLON>;
+            bindings = <&ru_dot>, <&kp SEMICOLON>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -300,7 +300,7 @@
         ctrl_dot_ru: ctrl_dot_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "CTRL_DOT_RU";
-            bindings = <&up_dot_ru>, <&kp RU_COLON>;
+            bindings = <&up_dot_ru>, <&kp COLON>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
@@ -387,7 +387,7 @@
             mods = <(MOD_LALT)>;
         };
     };
-    
+
     combos {
         compatible = "zmk,combos";
 
