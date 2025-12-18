@@ -804,10 +804,10 @@
 
         ru {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+         &kp A            &hml LC(LALT) E  &hml LS(LA(LCTRL)) F  &hml LS(LCTRL) DOT  &alt_min       &kp I            &hmr LS(LCTRL) V  &hmr LS(LA(LCTRL)) Y  &hmr LA(LCTRL) R  &kp P
+         &hml LEFT_GUI Z  &hml LALT B      &hml LCTRL J          &hml LSHFT T        &alt_dot_ru    &kp U            &hmr LSHFT N      &hmr LCTRL H          &hmr LALT D       &hmr LEFT_GUI X
+&kp SQT  &lt 7 Q          &kp S            &kp M                 &altcomma_ru        &trans         &kp COMMA        &kp L             &kp K                 &kp G             &kp SEMICOLON    &kp W
+                                           &trans                &trans              &trans         &lt 4 BACKSPACE  &mt LCTRL C       &trans
             >;
         };
 
