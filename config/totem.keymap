@@ -771,16 +771,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
         };
-
-        Rep_shift: Rep_shift {
-            compatible = "zmk,behavior-hold-tap";
-            label = "REP_SHIFT";
-            bindings = <&kp>, <&key_repeat>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <170>;
-            quick-tap-ms = <10>;
-        };
     };
 
     keymap {
