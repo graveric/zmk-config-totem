@@ -828,10 +828,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp ESC    &bt BT_CLR  &kp UP    &kp EQUAL  &kp LBRC    &kp RBRC  &kp KP_N7  &kp KP_N8  &kp KP_N9  &kp KP_PLUS
-        &kp LSHFT  &kp LEFT    &kp DOWN  &kp RIGHT  &kp LBKT    &kp RBKT  &kp KP_N4  &kp KP_N5  &kp KP_N6  &kp KP_MINUS
-&trans  &kp DEL    &kp PG_UP   &kp CAPS  &kp PG_DN  &kp LPAR    &kp RPAR  &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_MULTIPLY  &trans
-                               &trans    &trans     &trans      &mo 4     &kp KP_N0  &trans
+                &kp ESC    &kp LS(HOME)      &kp LS(UP)     &kp LS(END)      &kp DEL         &kp PAGE_UP      &kp HOME         &kp UP_ARROW       &kp END          &kp PRINTSCREEN
+                &kp LC(A)  &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)    &kp INS         &kp PAGE_DOWN    &kp LEFT_ARROW   &kp DOWN_ARROW     &kp RIGHT_ARROW  &kp K_MENU
+&kp K_PREVIOUS  &mo 8      &kp LS(LC(HOME))  &kp LC(MINUS)  &kp LS(LC(END))  &kp LC(PLUS)    &kp LC(HOME)     &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &kp LC(END)      &kp CAPS         &kp K_NEXT
+                                             &trans         &trans           &trans          &lt 5 BACKSPACE  &lt 6 DEL        &trans
             >;
         };
 
@@ -932,6 +932,15 @@
         };
 
         Shortcuts {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        Mouse {
             bindings = <
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
