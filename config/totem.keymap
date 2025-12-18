@@ -290,7 +290,7 @@
         up_dot_ru: up_dot_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "UP_DOT_RU";
-            bindings = <&ru_dot>, <&kp SEMICOLON>;
+            bindings = <&ru_dot>, <&kp DOLLAR>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -299,7 +299,7 @@
         ctrl_dot_ru: ctrl_dot_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "CTRL_DOT_RU";
-            bindings = <&up_dot_ru>, <&kp COLON>;
+            bindings = <&up_dot_ru>, <&kp LS(NUMBER_6)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
@@ -1040,10 +1040,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &trans     &trans  &trans   &trans   &trans      &ru_caret   &trans  &trans  &trans  &trans
-        &trans     &trans  &trans   &trans   &ru_hash    &ru_emdash  &trans  &trans  &trans  &trans
-&trans  &ru_tilda  &trans  &trans   &trans   &ru_at      &ru_endash  &trans  &trans  &trans  &trans  &trans
-                           &ru_rdq  &ru_ldq  &trans      &trans      &trans  &trans
+        &kp LS(NUMBER_3)     &hml LC(LALT) N9        &hml LS(LA(LCTRL)) N8  &hml LS(LCTRL) N7    &kp PERCENT    &ru_caret   &hmr LS(LCTRL) F3  &hmr LA(LS(LCTRL)) F4  &hmr LA(LCTRL) F9  &kp F10
+        &hml LEFT_GUI MINUS  &hml LEFT_ALT NUMBER_3  &hml LCTRL NUMBER_2    &hml LSHFT NUMBER_1  &ru_hash       &ru_emdash  &hmr LSHFT F2      &hmr LCTRL F5          &hmr LALT F8       &hmr LEFT_GUI F11
+&trans  &ru_tilda            &kp NUMBER_6            &kp N5                 &kp NUMBER_4         &ru_at         &ru_endash  &kp F1             &kp F6                 &kp F7             &kp F12            &trans
+                                                     &ru_rdq                &ru_ldq              &lt 5 N0       &trans      &trans             &trans
             >;
         };
 
