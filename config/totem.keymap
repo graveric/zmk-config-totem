@@ -572,9 +572,9 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LC(LA(NUMBER_6))>,
-                <&macro_wait_time 15>,
+                <&macro_wait_time 25>,
                 <&to 0>,
-                <&macro_wait_time 20>;
+                <&macro_wait_time 25>;
 
             label = "KB_EN";
         };
@@ -584,9 +584,9 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LC(LA(N7))>,
-                <&macro_wait_time 15>,
+                <&macro_wait_time 25>,
                 <&to 1>,
-                <&macro_wait_time 20>;
+                <&macro_wait_time 25>;
 
             label = "KB_RU";
         };
@@ -610,9 +610,9 @@
             #binding-cells = <0>;
             bindings =
                 <&KB_EN>,
-                <&macro_wait_time 20>,
+                <&macro_wait_time 30>,
                 <&kp LS(NUMBER_4)>,
-                <&macro_wait_time 10>,
+                <&macro_wait_time 30>,
                 <&KB_RU>;
 
             label = "RU_DOLLAR";
@@ -623,9 +623,9 @@
             #binding-cells = <0>;
             bindings =
                 <&KB_EN>,
-                <&macro_wait_time 10>,
+                <&macro_wait_time 30>,
                 <&kp HASH>,
-                <&macro_wait_time 10>,
+                <&macro_wait_time 30>,
                 <&KB_RU>;
 
             label = "RU_HASH";
@@ -636,9 +636,9 @@
             #binding-cells = <0>;
             bindings =
                 <&KB_EN>,
-                <&macro_wait_time 10>,
+                <&macro_wait_time 30>,
                 <&kp PIPE>,
-                <&macro_wait_time 10>,
+                <&macro_wait_time 30>,
                 <&KB_RU>;
 
             label = "RU_PIPE";
@@ -649,9 +649,9 @@
             #binding-cells = <0>;
             bindings =
                 <&KB_EN>,
-                <&macro_wait_time 20>,
+                <&macro_wait_time 30>,
                 <&kp TILDE>,
-                <&macro_wait_time 10>,
+                <&macro_wait_time 30>,
                 <&KB_RU>;
 
             label = "RU_TILDA";
@@ -662,9 +662,9 @@
             #binding-cells = <0>;
             bindings =
                 <&KB_EN>,
-                <&macro_wait_time 20>,
+                <&macro_wait_time 30>,
                 <&kp GRAVE>,
-                <&macro_wait_time 10>,
+                <&macro_wait_time 30>,
                 <&KB_RU>;
 
             label = "RU_GRAVE";
@@ -675,11 +675,11 @@
             #binding-cells = <0>;
             bindings =
                 <&KB_EN>,
-                <&macro_wait_time 10>,
+                <&macro_wait_time 30>,
                 <&kp LS(LC(U))>,
                 <&macro_wait_time 10>,
                 <&kp N2 &kp N0 &kp N1 &kp N4 &kp ENTER>,
-                <&macro_wait_time 10>,
+                <&macro_wait_time 30>,
                 <&KB_RU>;
 
             label = "RU_EMDASH";
@@ -702,9 +702,9 @@
             #binding-cells = <0>;
             bindings =
                 <&KB_EN>,
-                <&macro_wait_time 10>,
+                <&macro_wait_time 30>,
                 <&kp AT_SIGN>,
-                <&macro_wait_time 10>,
+                <&macro_wait_time 30>,
                 <&KB_RU>;
 
             label = "RU_AT";
@@ -874,9 +874,9 @@
             #binding-cells = <0>;
             bindings =
                 <&KB_EN>,
-                <&macro_wait_time 20>,
+                <&macro_wait_time 40>,
                 <&kp SQT>,
-                <&macro_wait_time 10>,
+                <&macro_wait_time 30>,
                 <&KB_RU>;
 
             label = "RU_UP_INCH";
@@ -887,9 +887,9 @@
             #binding-cells = <0>;
             bindings =
                 <&KB_EN>,
-                <&macro_wait_time 20>,
+                <&macro_wait_time 30>,
                 <&kp LS(N7)>,
-                <&macro_wait_time 10>,
+                <&macro_wait_time 30>,
                 <&KB_RU>;
 
             label = "RU_AMPRSND";
@@ -900,9 +900,9 @@
             #binding-cells = <0>;
             bindings =
                 <&KB_EN>,
-                <&macro_wait_time 10>,
-                <&kp FSLH>,
-                <&macro_wait_time 10>,
+                <&macro_wait_time 40>,
+                <&kp SLASH>,
+                <&macro_wait_time 40>,
                 <&KB_RU>;
 
             label = "RU_SLASH";
