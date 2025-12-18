@@ -404,13 +404,13 @@
 
         TO_RU {
             bindings = <&KB_RU>;
-            key-positions = <27 28>;
+            key-positions = <28 29>;
             layers = <0>;
         };
 
         TO_EN {
             bindings = <&KB_EN>;
-            key-positions = <27 28>;
+            key-positions = <28 29>;
             layers = <1>;
         };
 
@@ -434,12 +434,12 @@
 
         th_alt {
             bindings = <&kp LEFT_ALT>;
-            key-positions = <31 32>;
+            key-positions = <34 33>;
         };
 
         th_ctrl {
             bindings = <&kp LCTRL>;
-            key-positions = <30 31>;
+            key-positions = <32 33>;
         };
 
         en_lbr {
@@ -514,22 +514,22 @@
 
         c_z {
             bindings = <&kp LC(Z)>;
-            key-positions = <23 22>;
+            key-positions = <23 24>;
         };
 
         cs_z {
             bindings = <&kp LS(LC(Z))>;
-            key-positions = <22 21>;
+            key-positions = <22 23>;
         };
 
         rth_alt {
             bindings = <&kp LEFT_ALT>;
-            key-positions = <33 34>;
+            key-positions = <35 36>;
         };
 
         rth_gui {
             bindings = <&kp LGUI>;
-            key-positions = <35 34>;
+            key-positions = <36 37>;
         };
 
         tvrd {
@@ -546,7 +546,7 @@
 
         ru_sch2 {
             bindings = <&kp O>;
-            key-positions = <26 27>;
+            key-positions = <27 28>;
             layers = <1>;
         };
 
