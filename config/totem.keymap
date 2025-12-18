@@ -386,21 +386,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
-
-        combo_tvp {
-            timeout-ms = <100>;
-            key-positions = <11 12 13>;
-            bindings = <&tog 5>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         gif: gif {
@@ -933,10 +919,10 @@
 
         Shortcuts {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+        &kp LC(W)      &kp LC(Q)  &kp LC(LS(I))  &kp LS(LC(R))  &kp LC(T)    &kp LC(MINUS)  &kp LC(D)  &kp LC(N)          &kp LS(LC(M))  &kp LC(MINUS)
+        &kp LS(LC(K))  &kp LC(L)  &kp LC(S)      &kp LC(A)      &kp LC(F)    &kp LC(EQUAL)  &kp LC(P)  &kp LS(LA(LC(E)))  &kp LC(O)      &kp LC(PLUS)
+&trans  &trans         &kp LA(Z)  &kp LC(G)      &kp LC(R)      &kp LC(H)    &kp LC(B)      &kp LC(I)  &kp LC(U)          &kp LS(LC(X))  &kp LSHFT      &trans
+                                  &trans         &trans         &trans       &kp LS(LC(Z))  &kp LC(Z)  &kp LC(W)
             >;
         };
 
