@@ -953,10 +953,10 @@
 
         ru {
             bindings = <
-                  &kp A            &hml LC(LALT) E  &hml LS(LA(LCTRL)) F  &hml LS(LCTRL) DOT  &alt_min       &kp I            &hmr LS(LCTRL) V  &hmr LS(LA(LCTRL)) Y  &hmr LA(LCTRL) R  &kp P
-                  &hml LEFT_GUI Z  &hml LALT B      &hml LCTRL J          &hml LSHFT T        &alt_dot_ru    &kp U            &hmr LSHFT N      &hmr LCTRL H          &hmr LALT D       &hmr LEFT_GUI X
-&mt LEFT_SHIFT M  &lt 8 Q          &kp S            &kp M                 &altcomma_ru        &kp GRAVE      &kp COMMA        &kp L             &kp K                 &kp G             &kp SEMICOLON    &kp Z
-                                                    &trans                &trans              &trans         &lt 4 BACKSPACE  &mt LCTRL C       &trans
+                      &kp A            &hml LC(LALT) E  &hml LS(LA(LCTRL)) F  &hml LS(LCTRL) DOT  &alt_min       &kp I            &hmr LS(LCTRL) V  &hmr LS(LA(LCTRL)) Y  &hmr LA(LCTRL) R  &kp P
+                      &hml LEFT_GUI Z  &hml LALT B      &hml LCTRL J          &hml LSHFT T        &alt_dot_ru    &kp U            &hmr LSHFT N      &hmr LCTRL H          &hmr LALT D       &hmr LEFT_GUI X
+&mt LEFT_SHIFT GRAVE  &lt 8 Q          &kp S            &kp M                 &altcomma_ru        &kp M          &kp COMMA        &kp L             &kp K                 &kp G             &kp SEMICOLON    &kp Z
+                                                        &trans                &trans              &trans         &lt 4 BACKSPACE  &mt LCTRL C       &trans
             >;
         };
 
