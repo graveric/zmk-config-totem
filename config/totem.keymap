@@ -1001,10 +1001,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-              &en_number           &kp AT              &kp HASH             &kp DLLR             &kp PRCNT      &kp CARET   &hmr LS(LCTRL) F3  &hmr LS(LA(LCTRL)) F4  &hmr LA(LCTRL) F9  &kp F10
-              &hml LEFT_GUI MINUS  &hml LALT NUMBER_3  &hml LCTRL NUMBER_2  &hml LSHFT NUMBER_1  &kp HASH       &en_emdash  &hmr RSHFT F2      &hmr LCTRL F5          &hmr LALT F8       &hmr LEFT_GUI F11
-&kp C_VOL_DN  &kp TILDE            &kp NUMBER_6        &kp N5               &kp NUMBER_4         &kp AT_SIGN    &en_endash  &kp F1             &kp F6                 &kp F7             &kp F12            &kp C_VOL_UP
-                                                       &en_rdq              &en_ldq              &lt 5 N0       &trans      &trans             &trans
+              &en_number              &kp N9              &kp N8               &kp N7               &kp PRCNT      &kp CARET   &hmr LS(LCTRL) F3  &hmr LS(LA(LCTRL)) F4  &hmr LA(LCTRL) F9  &kp F10
+              &hml LEFT_GUI NUMBER_4  &hml LALT NUMBER_3  &hml LCTRL NUMBER_2  &hml LSHFT NUMBER_1  &kp HASH       &en_emdash  &hmr RSHFT F2      &hmr LCTRL F5          &hmr LALT F8       &hmr LEFT_GUI F11
+&kp C_VOL_DN  &kp TILDE               &kp NUMBER_6        &kp N5               &kp N5               &kp AT_SIGN    &en_endash  &kp F1             &kp F6                 &kp F7             &kp F12            &kp C_VOL_UP
+                                                          &en_rdq              &en_ldq              &lt 5 N0       &trans      &trans             &trans
             >;
         };
 
@@ -1025,10 +1025,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp LS(NUMBER_3)     &hml LC(LALT) N9        &hml LS(LA(LCTRL)) N8  &hml LS(LCTRL) N7    &kp PERCENT    &ru_caret   &hmr LS(LCTRL) F3  &hmr LA(LS(LCTRL)) F4  &hmr LA(LCTRL) F9  &kp F10
-        &hml LEFT_GUI MINUS  &hml LEFT_ALT NUMBER_3  &hml LCTRL NUMBER_2    &hml LSHFT NUMBER_1  &ru_hash       &ru_emdash  &hmr LSHFT F2      &hmr LCTRL F5          &hmr LALT F8       &hmr LEFT_GUI F11
-&trans  &ru_tilda            &kp NUMBER_6            &kp N5                 &kp NUMBER_4         &ru_at         &ru_endash  &kp F1             &kp F6                 &kp F7             &kp F12            &trans
-                                                     &ru_rdq                &ru_ldq              &lt 5 N0       &trans      &trans             &trans
+        &kp LS(NUMBER_3)        &hml LC(LALT) N9        &hml LS(LA(LCTRL)) N8  &hml LS(LCTRL) N7    &kp PERCENT    &ru_caret   &hmr LS(LCTRL) F3  &hmr LA(LS(LCTRL)) F4  &hmr LA(LCTRL) F9  &kp F10
+        &hml LEFT_GUI NUMBER_4  &hml LEFT_ALT NUMBER_3  &hml LCTRL NUMBER_2    &hml LSHFT NUMBER_1  &ru_hash       &ru_emdash  &hmr LSHFT F2      &hmr LCTRL F5          &hmr LALT F8       &hmr LEFT_GUI F11
+&trans  &ru_tilda               &kp NUMBER_6            &kp N5                 &kp N5               &ru_at         &ru_endash  &kp F1             &kp F6                 &kp F7             &kp F12            &trans
+                                                        &ru_rdq                &ru_ldq              &lt 5 N0       &trans      &trans             &trans
             >;
         };
 
@@ -1073,10 +1073,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp LG(LA(Q))  &kp LA(LG(O))  &kp LS(LG(K))  &kp LA(LG(R))  &kp LA(LG(T))    &kp LG(F)             &kp LS(LA(F8))  &kp LS(LA(F9))  &kp LS(LA(F10))  &kp LS(LA(F11))
-        &kp LA(LG(F))  &kp LS(LG(H))  &kp LS(LG(J))  &kp LS(LG(L))  &kp LA(LG(Y))    &kp LS(LG(UP_ARROW))  &kp LC(F1)      &kp LC(F2)      &kp LC(F3)       &kp LC(F4)
-&trans  &kp LG(M)      &kp LC(LG(K))  &kp LC(LG(H))  &kp LG(LC(L))  &kp LC(LG(J))    &kp LS(LG(DOWN))      &kp LG(M)       &kp LA(F3)      &kp LG(LC(A))    &kp LG(LC(D))    &trans
-                                      &kp LG(ENTER)  &kp LG(K)      &kp LG(J)        &trans                &trans          &trans
+               &kp LG(LA(Q))  &kp LA(LG(O))  &kp LS(LG(K))  &kp LA(LG(R))  &kp LA(LG(T))    &kp LG(F)             &kp LS(LA(F8))  &kp LS(LA(F9))  &kp LS(LA(F10))  &kp LS(LA(F11))
+               &kp LA(LG(F))  &kp LS(LG(H))  &kp LS(LG(J))  &kp LS(LG(L))  &kp LA(LG(Y))    &kp LS(LG(UP_ARROW))  &kp LC(F1)      &kp LC(F2)      &kp LC(F3)       &kp LC(F4)
+&kp LC(LG(H))  &kp LG(M)      &kp LC(LG(K))  &kp LC(LG(H))  &kp LG(LC(L))  &kp LC(LG(J))    &kp LS(LG(DOWN))      &kp LG(M)       &kp LA(F3)      &kp LG(LC(A))    &kp LG(LC(D))    &trans
+                                             &kp LG(ENTER)  &kp LG(K)      &kp LG(J)        &trans                &trans          &trans
             >;
         };
 
