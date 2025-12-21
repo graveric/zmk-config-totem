@@ -920,6 +920,22 @@
 
             label = "RU_BACKSLASH";
         };
+
+        new_line_down: new_line_down {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp END>, <&macro_wait_time 0>, <&kp LS(ENTER)>;
+
+            label = "NEW_LINE_DOWN";
+        };
+
+        new_line_up: new_line_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME>, <&macro_wait_time 0>, <&kp LS(ENTER)>;
+
+            label = "NEW_LINE_UP";
+        };
     };
 
     keymap {
@@ -977,10 +993,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp ESC    &kp LS(HOME)      &kp LS(UP)     &kp LS(END)      &kp DEL         &kp PAGE_UP      &kp HOME         &kp UP_ARROW       &kp END          &kp PRINTSCREEN
-            &kp LC(A)  &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)    &kp INS         &kp PAGE_DOWN    &kp LEFT_ARROW   &kp DOWN_ARROW     &kp RIGHT_ARROW  &kp C_MENU
-&kp C_PREV  &mo 8      &kp LS(LC(HOME))  &kp LC(MINUS)  &kp LS(LC(END))  &kp LC(PLUS)    &kp LC(HOME)     &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &kp LC(END)      &kp CAPS         &kp C_NEXT
-                                         &trans         &trans           &trans          &lt 5 BACKSPACE  &lt 6 DEL        &trans
+            &kp ESC       &kp LS(HOME)      &kp LS(UP)     &kp LS(END)      &kp DEL         &kp PAGE_UP      &kp HOME         &kp UP_ARROW       &kp END          &kp PRINTSCREEN
+            &new_line_up  &kp LS(LEFT)      &kp LS(DOWN)   &kp LS(RIGHT)    &kp INS         &kp PAGE_DOWN    &kp LEFT_ARROW   &kp DOWN_ARROW     &kp RIGHT_ARROW  &new_line_down
+&kp C_PREV  &mo 8         &kp LS(LC(HOME))  &kp LC(MINUS)  &kp LS(LC(END))  &kp LC(PLUS)    &kp LC(HOME)     &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &kp LC(END)      &kp CAPS         &kp C_NEXT
+                                            &trans         &trans           &trans          &lt 5 BACKSPACE  &lt 6 DEL        &trans
             >;
         };
 
