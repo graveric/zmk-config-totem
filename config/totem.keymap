@@ -1030,10 +1030,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp ESC       &kp LS(HOME)      &kp LS(UP)    &kp LS(END)      &kp DEL         &kp PAGE_UP      &kp HOME         &kp UP_ARROW       &kp END          &kp PRINTSCREEN
-            &new_line_up  &kp LS(LEFT)      &kp LS(DOWN)  &kp LS(RIGHT)    &kp INS         &kp PAGE_DOWN    &kp LEFT_ARROW   &kp DOWN_ARROW     &kp RIGHT_ARROW  &new_line_down
-&kp C_PREV  &mo 8         &kp LS(LC(HOME))  &cut_string   &kp LS(LC(END))  &copy_string    &kp LC(HOME)     &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &kp LC(END)      &kp CAPS         &kp C_NEXT
-                                            &trans        &trans           &trans          &lt 5 BACKSPACE  &lt 6 DEL        &trans
+            &copy_string  &kp LS(HOME)      &kp LS(UP)    &kp LS(END)      &kp DEL        &kp PAGE_UP         &kp HOME        &kp UP_ARROW    &kp END          &kp PRINTSCREEN
+            &cut_string   &kp LS(LEFT)      &kp LS(DOWN)  &kp LS(RIGHT)    &kp INS        &kp LC(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LC(RIGHT)
+&kp C_PREV  &mo 8         &kp LS(LC(HOME))  &new_line_up  &kp LS(LC(END))  &kp LS(DEL)    &kp PAGE_DOWN       &kp LC(HOME)    &new_line_down  &kp LC(END)      &kp CAPS         &kp C_NEXT
+                                            &trans        &trans           &trans         &lt 5 BACKSPACE     &lt 6 DEL       &trans
             >;
         };
 
