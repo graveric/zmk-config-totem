@@ -50,9 +50,23 @@
             #binding-cells = <0>;
             bindings = <&kp H>;
 
-            akt_ah { trigger-keys = <A>; max-prior-idle-ms = <300>; bindings = <&kp U>; };
-            akt_uh { trigger-keys = <U>; max-prior-idle-ms = <300>; bindings = <&kp A>; };
-            akt_eh { trigger-keys = <E>; max-prior-idle-ms = <300>; bindings = <&kp O>; };
+            akt_ah {
+                trigger-keys = <A>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp U>;
+            };
+
+            akt_uh {
+                trigger-keys = <U>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp A>;
+            };
+
+            akt_eh {
+                trigger-keys = <E>;
+                max-prior-idle-ms = <300>;
+                bindings = <&kp O>;
+            };
         };
 
         hmr: hrm_right {
@@ -1037,7 +1051,7 @@
            &kp A            &hml LC(LALT) E  &hml LS(LA(LCTRL)) F  &hml LS(LCTRL) DOT  &alt_min       &kp I               &hmr LS(LCTRL) V  &hmr LS(LA(LCTRL)) Y  &hmr LA(LCTRL) R  &kp P
            &hml LEFT_GUI Z  &hml LALT B      &hml LCTRL J          &hml LSHFT T        &alt_dot_ru    &kp U               &hmr LSHFT N      &hmr LCTRL H          &hmr LALT D       &hmr LEFT_GUI X
 &lt 8 SQT  &lt 7 Q          &kp S            &kp M                 &altcomma_ru        &kp GRAVE      &kp COMMA           &kp L             &kp K                 &kp G             &kp SEMICOLON    &kp W
-                                             &trans                &trans              &trans         &lt_bk 4 BACKSPACE  &mt LCTRL C       &trans
+                                             &trans                &trans              &trans         &lt_bk 4 BACKSPACE  &mt LCTRL C       &ak_h
             >;
         };
 
