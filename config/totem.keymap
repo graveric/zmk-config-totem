@@ -82,7 +82,20 @@
             akt_oa { trigger-keys = <O>; max-prior-idle-ms = <1000>; bindings = <&kp A>; };
             akt_eu { trigger-keys = <E>; max-prior-idle-ms = <1000>; bindings = <&kp U>; };
             akt_dotsp { trigger-keys = <DOT>; max-prior-idle-ms = <1000>; bindings = <&sp_shift>; };
+            akt_sclp { trigger-keys = <SEMICOLON>; max-prior-idle-ms = <1000>; bindings = <&kp RPAR>; };
+            akt_pb { trigger-keys = <P>; max-prior-idle-ms = <1000>; bindings = <&kp B>; };
+            akt_dg { trigger-keys = <D>; max-prior-idle-ms = <1000>; bindings = <&kp G>; };
+            akt_rn { trigger-keys = <R>; max-prior-idle-ms = <1000>; bindings = <&kp N>; };
+            akt_sw { trigger-keys = <S>; max-prior-idle-ms = <1000>; bindings = <&kp W>; };
+            akt_mv { trigger-keys = <M>; max-prior-idle-ms = <1000>; bindings = <&kp V>; };
+            akt_xh { trigger-keys = <X>; max-prior-idle-ms = <1000>; bindings = <&kp H>; };
+            akt_br { trigger-keys = <B>; max-prior-idle-ms = <1000>; bindings = <&kp R>; };
+            akt_ch { trigger-keys = <C>; max-prior-idle-ms = <1000>; bindings = <&kp H>; };
+            akt_ln { trigger-keys = <L>; max-prior-idle-ms = <1000>; bindings = <&kp N>; };
+            akt_ws { trigger-keys = <W>; max-prior-idle-ms = <1000>; bindings = <&kp S>; };
+            akt_vm { trigger-keys = <V>; max-prior-idle-ms = <1000>; bindings = <&kp M>; };
         };
+
         arc_ru: arc_ru {
             compatible = "zmk,behavior-adaptive-key";
             #binding-cells = <0>;
@@ -108,7 +121,21 @@
             akt_ui { trigger-keys = <E>; max-prior-idle-ms = <1000>; bindings = <&kp B>; };
             akt_dotsp { trigger-keys = <SLASH>; max-prior-idle-ms = <1000>; bindings = <&sp_shift>; };
             akt_yuzp { trigger-keys = <DOT>; max-prior-idle-ms = <1000>; bindings = <&comma_sp_ru>; };
+            akt_zhch { trigger-keys = <SEMICOLON>; max-prior-idle-ms = <1000>; bindings = <&kp X>; };
+            akt_zzh { trigger-keys = <P>; max-prior-idle-ms = <1000>; bindings = <&kp SEMICOLON>; };
+            akt_vk { trigger-keys = <D>; max-prior-idle-ms = <1000>; bindings = <&kp R>; };
+            akt_kp { trigger-keys = <R>; max-prior-idle-ms = <1000>; bindings = <&kp G>; };
+            akt_yii { trigger-keys = <S>; max-prior-idle-ms = <1000>; bindings = <&kp B>; };
+            akt__yiyu { trigger-keys = <M>; max-prior-idle-ms = <1000>; bindings = <&kp DOT>; };
+            akt_chzh { trigger-keys = <X>; max-prior-idle-ms = <1000>; bindings = <&kp SEMICOLON>; };
+            akt_bsch { trigger-keys = <COMMA>; max-prior-idle-ms = <1000>; bindings = <&kp O>; };
+            akt_iu { trigger-keys = <B>; max-prior-idle-ms = <1000>; bindings = <&kp E>; };
+            akt_stv { trigger-keys = <C>; max-prior-idle-ms = <1000>; bindings = <&kp RBKT>; };
+            akt_dn { trigger-keys = <L>; max-prior-idle-ms = <1000>; bindings = <&kp Y>; };
+            akt_tzm { trigger-keys = <W>; max-prior-idle-ms = <1000>; bindings = <&kp V>; };
+            akt_mb { trigger-keys = <V>; max-prior-idle-ms = <1000>; bindings = <&kp COMMA>; };
         };
+
         up_: up_ {
             compatible = "zmk,behavior-mod-morph";
             label = "UP_";
