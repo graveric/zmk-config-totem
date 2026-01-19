@@ -575,6 +575,24 @@
             bindings = <&mkp LCLK>;
             key-positions = <25 14>;
         };
+
+        ShiftEnter {
+            bindings = <&kp LS(ENTER)>;
+            key-positions = <26 27>;
+            layers = <2 5>;
+        };
+
+        CtrlEnter {
+            bindings = <&kp LC(ENTER)>;
+            key-positions = <26 27 28>;
+            layers = <2 5>;
+        };
+
+        CtrlBksp {
+            bindings = <&kp LC(BACKSPACE)>;
+            key-positions = <27 28>;
+            layers = <2 5>;
+        };
     };
 
     macros {
@@ -1030,10 +1048,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &copy_string  &kp LS(HOME)      &kp LS(UP)    &kp LS(END)      &kp DEL        &kp PAGE_UP         &kp HOME        &kp UP_ARROW    &kp END          &kp PRINTSCREEN
-            &cut_string   &kp LS(LEFT)      &kp LS(DOWN)  &kp LS(RIGHT)    &kp INS        &kp LC(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LC(RIGHT)
-&kp C_PREV  &mo 8         &kp LS(LC(HOME))  &new_line_up  &kp LS(LC(END))  &kp LS(DEL)    &kp PAGE_DOWN       &kp LC(HOME)    &new_line_down  &kp LC(END)      &kp CAPS         &kp C_NEXT
-                                            &trans        &trans           &trans         &lt 5 BACKSPACE     &lt 6 DEL       &trans
+            &kp LS(DELETE)  &kp LS(HOME)  &kp LS(UP)    &kp LS(END)     &kp LC(LS(HOME))    &kp LC(HOME)     &kp HOME        &kp UP_ARROW    &kp END          &kp PAGE_UP
+            &kp LS(LC(K))   &kp LS(LEFT)  &kp LS(DOWN)  &kp LS(RIGHT)   &kp LS(LC(END))     &kp LC(END)      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN
+&kp C_PREV  &mo 8           &copy_string  &cut_string   &new_line_down  &new_line_up        &kp ENTER        &kp BACKSPACE   &kp DELETE      &kp INS          &kp PRINTSCREEN  &kp C_NEXT
+                                          &trans        &trans          &trans              &lt 5 BACKSPACE  &lt 6 DEL       &trans
             >;
         };
 
@@ -1102,10 +1120,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &bootloader  &none  &none   &none   &none     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2    &bt BT_SEL 3  &bt BT_SEL 4
-            &none        &none  &none   &none   &none     &out OUT_BLE  &none         &none           &none         &none
-&bt BT_PRV  &none        &none  &none   &none   &none     &out OUT_USB  &bt BT_CLR    &bt BT_CLR_ALL  &none         &studio_unlock  &bt BT_NXT
-                                &trans  &trans  &trans    &trans        &trans        &trans
+            &bootloader     &out OUT_BLE  &out OUT_USB  &none   &none     &bt BT_SEL 0  &bt BT_SEL 1   &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+            &bt BT_CLR      &none         &none         &none   &none     &none         &none          &none         &none         &none
+&bt BT_PRV  &bt BT_CLR_ALL  &none         &none         &none   &none     &kp ENTER     &kp BACKSPACE  &kp DEL       &kp INS       &kp PRINTSCREEN  &bt BT_NXT
+                                          &trans        &trans  &trans    &trans        &trans         &trans
             >;
         };
 
