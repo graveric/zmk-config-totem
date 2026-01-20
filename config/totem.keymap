@@ -1882,7 +1882,7 @@
                     &kp J        &hml LA(LCTRL) Y  &hml LA(LC(LSHFT)) A  &hml LC(LSHFT) U         &alt_min       &kp Q    &hmr LC(LSHFT) G          &hmr LA(LC(LSHFT)) N  &hmr LC(LALT) F  &kp K
                     &hml LGUI H  &hml LALT I       &hml LCTRL O          &hml LSHFT E             &alt_dot_en    &kp P    &hmr RSHFT D              &hmr LCTRL R          &hmr LALT S      &hmr LEFT_GUI M
 &lt 8 C_PLAY_PAUSE  &lt 7 X      &alt_inch         &alt_                 &altcomma_en             &alt_slash     &kp B    &kp C                     &kp L                 &kp W            &kp V            &kp Z
-                                                   &lt 7 ESCAPE          &arcane_left_en LSHFT 0  &lt 2 SPACE    &lt 3 T  &arcane_right_en RSHFT 0  &mt LCTRL TAB
+                                                   &lt 7 TAB             &arcane_left_en LSHFT 0  &lt 2 SPACE    &lt 3 T  &arcane_right_en RSHFT 0  &mt LCTRL ESC
             >;
         };
 
