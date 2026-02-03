@@ -1028,7 +1028,7 @@
         ctrl_: ctrl_ {
             compatible = "zmk,behavior-mod-morph";
             label = "CTRL_";
-            bindings = <&up_>, <&kp pipe>;
+            bindings = <&up_>, <&kp PIPE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
