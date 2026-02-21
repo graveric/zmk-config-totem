@@ -1936,10 +1936,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-              &en_number           &kp N9              &kp N8               &kp N7               &kp PRCNT      &kp CARET   &hmr LS(LCTRL) F3  &hmr LS(LA(LCTRL)) F4  &hmr LA(LCTRL) F9  &kp F10
-              &hml LEFT_GUI MINUS  &hml LALT NUMBER_3  &hml LCTRL NUMBER_2  &hml LSHFT NUMBER_1  &kp HASH       &en_emdash  &hmr RSHFT F2      &hmr LCTRL F5          &hmr LALT F8       &hmr LEFT_GUI F11
-&kp C_VOL_DN  &kp TILDE            &kp NUMBER_6        &kp N5               &kp NUMBER_4         &kp AT_SIGN    &en_endash  &kp F1             &kp F6                 &kp F7             &kp F12            &kp C_VOL_UP
-                                                       &en_rdq              &en_ldq              &lt 5 N0       &trans      &trans             &trans
+              &kp RA(NUMBER_3)     &kp N9              &kp N8               &kp N7               &kp PRCNT      &kp LS(NUMBER_6)   &hmr LS(LCTRL) F3  &hmr LS(LA(LCTRL)) F4  &hmr LA(LCTRL) F9  &kp F10
+              &hml LEFT_GUI MINUS  &hml LALT NUMBER_3  &hml LCTRL NUMBER_2  &hml LSHFT NUMBER_1  &kp HASH       &kp RA(MINUS)      &hmr RSHFT F2      &hmr LCTRL F5          &hmr LALT F8       &lt 9 F11
+&kp C_VOL_DN  &kp TILDE            &kp NUMBER_6        &kp N5               &kp NUMBER_4         &kp AT_SIGN    &kp RA(SEMICOLON)  &kp F1             &kp F6                 &kp F7             &hmr LEFT_GUI F12  &kp C_VOL_UP
+                                                       &kp RA(PERIOD)       &kp RA(COMMA)        &lt 5 N0       &trans             &trans             &trans
             >;
         };
 
@@ -1960,10 +1960,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp LS(NUMBER_3)     &hml LC(LALT) N9        &hml LS(LA(LCTRL)) N8  &hml LS(LCTRL) N7    &kp PERCENT    &ru_caret   &hmr LS(LCTRL) F3  &hmr LA(LS(LCTRL)) F4  &hmr LA(LCTRL) F9  &kp F10
-        &hml LEFT_GUI MINUS  &hml LEFT_ALT NUMBER_3  &hml LCTRL NUMBER_2    &hml LSHFT NUMBER_1  &ru_hash       &ru_emdash  &hmr LSHFT F2      &hmr LCTRL F5          &hmr LALT F8       &hmr LEFT_GUI F11
-&trans  &ru_tilda            &kp NUMBER_6            &kp N5                 &kp NUMBER_4         &ru_at         &ru_endash  &kp F1             &kp F6                 &kp F7             &kp F12            &trans
-                                                     &ru_rdq                &ru_ldq              &lt 5 N0       &trans      &trans             &trans
+        &kp RA(NUMBER_3)     &hml LC(LALT) N9        &hml LS(LA(LCTRL)) N8  &hml LS(LCTRL) N7    &kp PERCENT    &kp RA(NUMBER_6)   &hmr LS(LCTRL) F3  &hmr LA(LS(LCTRL)) F4  &hmr LA(LCTRL) F9  &kp F10
+        &hml LEFT_GUI MINUS  &hml LEFT_ALT NUMBER_3  &hml LCTRL NUMBER_2    &hml LSHFT NUMBER_1  &kp HASH       &kp RA(MINUS)      &hmr LSHFT F2      &hmr LCTRL F5          &hmr LALT F8       &lt 10 F11
+&trans  &kp RA(LS(GRAVE))    &kp NUMBER_6            &kp N5                 &kp NUMBER_4         &kp AT_SIGN    &kp RA(SEMICOLON)  &kp F1             &kp F6                 &kp F7             &hmr LEFT_GUI F12  &trans
+                                                     &kp RA(PERIOD)         &kp RA(COMMA)        &lt 5 N0       &trans             &trans             &trans
             >;
         };
 
@@ -2030,6 +2030,24 @@
        &kp LEFT_GUI  &kp LALT      &sk LCTRL          &sk LSHFT      &trans    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
 &mo 8  &mo 8         &trans        &trans             &trans         &trans    &trans          &msc SCRL_LEFT  &mkp MCLK       &msc SCRL_RIGHT  &trans  &trans
                                    &trans             &trans         &trans    &trans          &trans          &trans
+            >;
+        };
+
+        Fadein {
+            bindings = <
+        &trans  &trans  &trans   &trans   &trans    &trans      &trans      &trans  &trans  &trans
+        &trans  &trans  &trans   &trans   &trans    &en_emdash  &en_endash  &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans   &trans    &trans      &trans      &trans  &trans  &trans  &trans
+                        &en_rdq  &en_ldq  &trans    &trans      &trans      &trans
+            >;
+        };
+
+        Fadeinru {
+            bindings = <
+        &trans  &trans  &trans   &trans   &trans    &trans      &trans      &trans  &trans  &trans
+        &trans  &trans  &trans   &trans   &trans    &ru_emdash  &ru_endash  &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &trans   &trans    &trans      &trans      &trans  &trans  &trans  &trans
+                        &ru_rdq  &ru_ldq  &trans    &trans      &trans      &trans
             >;
         };
     };
