@@ -1855,6 +1855,141 @@
             bindings = <&kp I &kp N &kp G>;
             label = "ING";
         };
+
+        ru_hypenminus: ru_hypenminus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&KB_EN>,
+                <&macro_wait_time 30>,
+                <&kp LS(LC(U))>,
+                <&macro_wait_time 10>,
+                <&kp N0 &kp N0 &kp NUMBER_2 &kp D &kp ENTER>,
+                <&macro_wait_time 30>,
+                <&KB_RU>;
+
+            label = "RU_HYPENMINUS";
+        };
+
+        en_hyperminus: en_hyperminus {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(LC(U))>,
+                <&macro_wait_time 10>,
+                <&kp N0 &kp N0 &kp NUMBER_2 &kp D &kp ENTER>,
+                <&macro_wait_time 30>;
+
+            label = "EN_HYPERMINUS";
+        };
+
+        ru_figuredash: ru_figuredash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&KB_EN>,
+                <&macro_wait_time 30>,
+                <&kp LS(LC(U))>,
+                <&macro_wait_time 10>,
+                <&kp NUMBER_2 &kp N0 &kp NUMBER_1 &kp NUMBER_2 &kp ENTER>,
+                <&macro_wait_time 30>,
+                <&KB_RU>;
+
+            label = "RU_FIGUREDASH";
+        };
+
+        en_figuredash: en_figuredash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(LC(U))>,
+                <&macro_wait_time 10>,
+                <&kp NUMBER_2 &kp N0 &kp NUMBER_1 &kp NUMBER_2 &kp ENTER>,
+                <&macro_wait_time 30>;
+
+            label = "EN_FIGUREDASH";
+        };
+
+        ru_tenge: ru_tenge {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&KB_EN>,
+                <&macro_wait_time 30>,
+                <&kp LS(LC(U))>,
+                <&macro_wait_time 10>,
+                <&kp NUMBER_2 &kp N0 &kp B &kp N8 &kp ENTER>,
+                <&macro_wait_time 30>,
+                <&KB_RU>;
+
+            label = "RU_TENGE";
+        };
+
+        en_tenge: en_tenge {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(LC(U))>,
+                <&macro_wait_time 10>,
+                <&kp NUMBER_2 &kp N0 &kp B &kp N8 &kp ENTER>,
+                <&macro_wait_time 30>;
+
+            label = "EN_TENGE";
+        };
+
+        ru_mngt: ru_mngt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&KB_EN>,
+                <&macro_wait_time 30>,
+                <&kp LS(LC(U))>,
+                <&macro_wait_time 10>,
+                <&kp NUMBER_2 &kp N0 &kp NUMBER_2 &kp NUMBER_6 &kp ENTER>,
+                <&macro_wait_time 30>,
+                <&KB_RU>;
+
+            label = "RU_MNGT";
+        };
+
+        en_mngt: en_mngt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(LC(U))>,
+                <&macro_wait_time 10>,
+                <&kp NUMBER_2 &kp N0 &kp NUMBER_2 &kp NUMBER_6 &kp ENTER>,
+                <&macro_wait_time 30>;
+
+            label = "EN_MNGT";
+        };
+
+        ru_quex: ru_quex {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&KB_EN>,
+                <&macro_wait_time 30>,
+                <&kp LS(LC(U))>,
+                <&macro_wait_time 10>,
+                <&kp NUMBER_2 &kp N0 &kp NUMBER_4 &kp N8 &kp ENTER>,
+                <&macro_wait_time 30>,
+                <&KB_RU>;
+
+            label = "RU_QUEX";
+        };
+
+        en_quex: en_quex {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp LS(LC(U))>,
+                <&macro_wait_time 10>,
+                <&kp NUMBER_2 &kp N0 &kp NUMBER_4 &kp N8 &kp ENTER>,
+                <&macro_wait_time 30>;
+
+            label = "EN_QUEX";
+        };
     };
 
     keymap {
@@ -2035,19 +2170,19 @@
 
         Fadein {
             bindings = <
-        &trans  &trans  &trans   &trans   &trans    &trans      &trans      &trans  &trans  &trans
-        &trans  &trans  &trans   &trans   &trans    &en_emdash  &en_endash  &trans  &trans  &trans
-&trans  &trans  &trans  &trans   &trans   &trans    &trans      &trans      &trans  &trans  &trans  &trans
-                        &en_rdq  &en_ldq  &trans    &trans      &trans      &trans
+        &trans  &trans  &trans   &trans     &trans      &trans          &trans          &trans  &trans  &trans
+        &trans  &trans  &trans   &en_tenge  &en_mngt    &en_emdash      &en_endash      &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &en_quex   &trans      &en_hyperminus  &en_figuredash  &trans  &trans  &trans  &trans
+                        &en_rdq  &en_ldq    &trans      &trans          &trans          &trans
             >;
         };
 
         Fadeinru {
             bindings = <
-        &trans  &trans  &trans   &trans   &trans    &trans      &trans      &trans  &trans  &trans
-        &trans  &trans  &trans   &trans   &trans    &ru_emdash  &ru_endash  &trans  &trans  &trans
-&trans  &trans  &trans  &trans   &trans   &trans    &trans      &trans      &trans  &trans  &trans  &trans
-                        &ru_rdq  &ru_ldq  &trans    &trans      &trans      &trans
+        &trans  &trans  &trans   &trans     &trans      &trans          &trans          &trans  &trans  &trans
+        &trans  &trans  &trans   &ru_tenge  &ru_mngt    &ru_emdash      &ru_endash      &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &ru_quex   &trans      &ru_hypenminus  &ru_figuredash  &trans  &trans  &trans  &trans
+                        &ru_rdq  &ru_ldq    &trans      &trans          &trans          &trans
             >;
         };
     };
