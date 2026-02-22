@@ -1404,17 +1404,17 @@
 
         mrck2 {
             bindings = <&mkp MB2>;
-            key-positions = <24 13>;
+            key-positions = <23 12>;
         };
 
         mmck {
             bindings = <&mkp MB3>;
-            key-positions = <23 12>;
+            key-positions = <22 11>;
         };
 
         mlcck {
             bindings = <&mkp LCLK>;
-            key-positions = <25 14>;
+            key-positions = <24 13>;
         };
 
         ShiftEnter {
