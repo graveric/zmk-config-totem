@@ -1109,7 +1109,7 @@
         ctrl_slash_ru: ctrl_slash_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "CTRL_SLASH_RU";
-            bindings = <&up_slash_ru>, <&ru_gt>;
+            bindings = <&up_slash_ru>, <&kp RA(LS(L))>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
@@ -1118,7 +1118,7 @@
         alt_slash_ru: alt_slash_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_SLASH_RU";
-            bindings = <&ctrl_slash_ru>, <&ru_dollar>;
+            bindings = <&ctrl_slash_ru>, <&kp RA(NUMBER_4)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -1127,7 +1127,7 @@
         ru_up_: ru_up_ {
             compatible = "zmk,behavior-mod-morph";
             label = "RU_UP_";
-            bindings = <&kp UNDERSCORE>, <&ru_amprsnd>;
+            bindings = <&kp UNDERSCORE>, <&kp RA(N7)>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LSFT)>;
@@ -1136,7 +1136,7 @@
         ctrl_ru_: ctrl_ru_ {
             compatible = "zmk,behavior-mod-morph";
             label = "CTRL_RU_";
-            bindings = <&ru_up_>, <&ru_pipe>;
+            bindings = <&ru_up_>, <&kp RA(BACKSLASH)>;
 
             #binding-cells = <0>;
             mods = <(MOD_RCTL|MOD_LCTL)>;
@@ -1145,7 +1145,7 @@
         alt_ru_: alt_ru_ {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_RU_";
-            bindings = <&ctrl_ru_>, <&ru_bkslsh>;
+            bindings = <&ctrl_ru_>, <&kp BACKSLASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -1154,7 +1154,7 @@
         ru_upinch: ru_upinch {
             compatible = "zmk,behavior-mod-morph";
             label = "RU_UPINCH";
-            bindings = <&kp AT_SIGN>, <&ru_apostrophe>;
+            bindings = <&kp RA(NUMBER_2)>, <&ru_apostrophe>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -1163,7 +1163,7 @@
         ctrl_ru_inch: ctrl_ru_inch {
             compatible = "zmk,behavior-mod-morph";
             label = "CTRL_RU_INCH";
-            bindings = <&ru_upinch>, <&ru_lt>;
+            bindings = <&ru_upinch>, <&kp RA(L)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
@@ -1172,7 +1172,7 @@
         alt_ru_inch: alt_ru_inch {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_RU_INCH";
-            bindings = <&ctrl_ru_inch>, <&ru_grave>;
+            bindings = <&ctrl_ru_inch>, <&kp RA(GRAVE)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
