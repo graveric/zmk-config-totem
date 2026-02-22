@@ -1434,6 +1434,16 @@
             key-positions = <27 28>;
             layers = <2 5>;
         };
+
+        Ralt1 {
+            bindings = <&sk RIGHT_ALT>;
+            key-positions = <14 25>;
+        };
+
+        Ralt2 {
+            bindings = <&sk RIGHT_ALT>;
+            key-positions = <26 15>;
+        };
     };
 
     macros {
