@@ -1420,19 +1420,19 @@
         ShiftEnter {
             bindings = <&kp LS(ENTER)>;
             key-positions = <26 27>;
-            layers = <2 5>;
+            layers = <2 11>;
         };
 
         CtrlEnter {
             bindings = <&kp LC(ENTER)>;
             key-positions = <26 27 28>;
-            layers = <2 5>;
+            layers = <2 11>;
         };
 
         CtrlBksp {
             bindings = <&kp LC(BACKSPACE)>;
             key-positions = <27 28>;
-            layers = <2 5>;
+            layers = <2 11>;
         };
 
         Ralt1 {
@@ -2057,10 +2057,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp LS(DELETE)  &kp LS(HOME)  &kp LS(UP)    &kp LS(END)     &kp LC(LS(HOME))    &kp LC(HOME)  &kp HOME            &kp UP_ARROW    &kp END          &kp PAGE_UP
-            &kp LS(LC(K))   &kp LS(LEFT)  &kp LS(DOWN)  &kp LS(RIGHT)   &kp LS(LC(END))     &kp LC(END)   &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_DOWN
-&kp C_PREV  &mo 8           &copy_string  &cut_string   &new_line_down  &new_line_up        &kp ENTER     &kp BACKSPACE       &kp DELETE      &kp INS          &kp PRINTSCREEN  &kp C_NEXT
-                                          &trans        &trans          &trans              &mo 5         &layer_sft 6 RSHFT  &kp LCTRL
+            &kp LS(DELETE)   &kp LS(HOME)  &kp LS(UP)    &kp LS(END)     &kp LC(LS(HOME))    &kp LC(HOME)  &kp HOME            &kp UP_ARROW    &kp END          &kp PAGE_UP
+            &lt 5 LS(LC(K))  &kp LS(LEFT)  &kp LS(DOWN)  &kp LS(RIGHT)   &kp LS(LC(END))     &kp LC(END)   &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW  &lt 5 PG_DN
+&kp C_PREV  &mo 8            &copy_string  &cut_string   &new_line_down  &new_line_up        &kp ENTER     &kp BACKSPACE       &kp DELETE      &kp INS          &kp PRINTSCREEN  &kp C_NEXT
+                                           &trans        &trans          &trans              &mo 11        &layer_sft 6 RSHFT  &kp LCTRL
             >;
         };
 
@@ -2084,7 +2084,7 @@
               &kp RA(NUMBER_3)     &kp N9              &kp N8               &kp N7               &kp PRCNT      &kp LS(NUMBER_6)   &hmr LS(LCTRL) F3  &hmr LS(LA(LCTRL)) F4  &hmr LA(LCTRL) F9  &kp F10
               &hml LEFT_GUI MINUS  &hml LALT NUMBER_3  &hml LCTRL NUMBER_2  &hml LSHFT NUMBER_1  &kp HASH       &kp RA(MINUS)      &hmr RSHFT F2      &hmr LCTRL F5          &hmr LALT F8       &lt 9 F11
 &kp C_VOL_DN  &kp TILDE            &kp NUMBER_6        &kp N5               &kp NUMBER_4         &kp AT_SIGN    &kp RA(SEMICOLON)  &kp F1             &kp F6                 &kp F7             &hmr LEFT_GUI F12  &kp C_VOL_UP
-                                                       &kp RA(PERIOD)       &kp RA(COMMA)        &lt 5 N0       &trans             &trans             &trans
+                                                       &kp RA(PERIOD)       &kp RA(COMMA)        &lt 11 N0      &trans             &trans             &trans
             >;
         };
 
@@ -2108,7 +2108,7 @@
         &kp RA(NUMBER_3)     &hml LC(LALT) N9        &hml LS(LA(LCTRL)) N8  &hml LS(LCTRL) N7    &kp PERCENT    &kp RA(NUMBER_6)   &hmr LS(LCTRL) F3  &hmr LA(LS(LCTRL)) F4  &hmr LA(LCTRL) F9  &kp F10
         &hml LEFT_GUI MINUS  &hml LEFT_ALT NUMBER_3  &hml LCTRL NUMBER_2    &hml LSHFT NUMBER_1  &kp HASH       &kp RA(MINUS)      &hmr LSHFT F2      &hmr LCTRL F5          &hmr LALT F8       &lt 10 F11
 &trans  &kp RA(LS(GRAVE))    &kp NUMBER_6            &kp N5                 &kp NUMBER_4         &kp AT_SIGN    &kp RA(SEMICOLON)  &kp F1             &kp F6                 &kp F7             &hmr LEFT_GUI F12  &trans
-                                                     &kp RA(PERIOD)         &kp RA(COMMA)        &lt 5 N0       &trans             &trans             &trans
+                                                     &kp RA(PERIOD)         &kp RA(COMMA)        &lt 11 N0      &trans             &trans             &trans
             >;
         };
 
@@ -2193,6 +2193,15 @@
         &trans  &trans  &trans   &ru_tenge  &ru_mngt    &ru_emdash      &ru_endash      &trans  &trans  &trans
 &trans  &trans  &trans  &trans   &ru_quex   &trans      &ru_hypenminus  &ru_figuredash  &trans  &trans  &trans  &trans
                         &ru_rdq  &ru_ldq    &trans      &trans          &trans          &trans
+            >;
+        };
+
+        unicode {
+            bindings = <
+        &kp LALT   &kp RA(E)  &kp RA(F)  &kp RA(X)      &kp RA(EQUAL)           &kp RA(D)  &kp RA(A)  &kp RA(Y)     &kp RA(R)  &kp RA(G)
+        &kp RA(H)  &kp RA(B)  &kp RA(J)  &kp LSHFT      &kp RS(RA(N7))          &kp RA(O)  &kp LSHFT  &kp RA(FSLH)  &kp RA(C)  &kp RA(N5)
+&trans  &kp LGUI   &kp RA(S)  &kp RA(M)  &kp RA(LS(M))  &kp RA(LS(NUMBER_3))    &kp ENTER  &kp BSPC   &kp DEL       &kp INS    &kp PRINTSCREEN  &trans
+                              &trans     &trans         &trans                  &trans     &trans     &trans
             >;
         };
     };
