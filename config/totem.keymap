@@ -2199,8 +2199,8 @@
         unicode {
             bindings = <
         &kp LALT   &kp RA(E)  &kp RA(F)  &kp RA(X)             &kp RA(EQUAL)           &kp RA(D)  &kp RA(A)  &kp RA(Y)     &kp RA(R)  &kp RA(G)
-        &kp RA(H)  &kp RA(B)  &kp RA(J)  &kp LSHFT             &kp RS(RA(NUMBER_6))    &kp RA(O)  &kp LSHFT  &kp RA(FSLH)  &kp RA(C)  &kp RA(N5)
-&trans  &kp LGUI   &kp RA(S)  &kp RA(M)  &kp RA(LS(NUMBER_1))  &kp RA(LS(NUMBER_3))    &kp ENTER  &kp BSPC   &kp DEL       &kp INS    &kp PRINTSCREEN  &trans
+        &kp RA(H)  &kp RA(B)  &kp RA(J)  &kp LSHFT             &kp RS(RA(NUMBER_6))    &kp RA(U)  &kp LSHFT  &kp RA(FSLH)  &kp RA(C)  &kp RA(N5)
+&trans  &kp LGUI   &kp RA(S)  &kp RA(O)  &kp RA(LS(NUMBER_1))  &kp RA(LS(NUMBER_3))    &kp ENTER  &kp BSPC   &kp DEL       &kp INS    &kp PRINTSCREEN  &trans
                               &trans     &trans                &trans                  &trans     &trans     &trans
             >;
         };
