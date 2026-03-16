@@ -1367,11 +1367,13 @@
         c_z {
             bindings = <&kp LC(Z)>;
             key-positions = <23 24>;
+            layers = <0 1>;
         };
 
         cs_z {
             bindings = <&kp LS(LC(Z))>;
             key-positions = <22 23>;
+            layers = <0 1>;
         };
 
         rth_alt {
