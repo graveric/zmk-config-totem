@@ -1237,6 +1237,19 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        holdctrl_skalt: holdctrl_skalt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLDCTRL_SKALT";
+            bindings = <&kp>, <&sk>;
+
+            #binding-cells = <2>;
+            hold-trigger-on-release;
+            tapping-term-ms = <170>;
+            quick-tap-ms = <125>;
+            require-prior-idle-ms = <150>;
+            flavor = "balanced";
+        };
     };
 
     combos {
@@ -2038,19 +2051,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                    &kp J  &kp Y        &kp A         &kp U                    &alt_min       &kp Q    &kp G                     &kp N             &kp F        &kp K
-                    &kp H  &hml LALT I  &hml LCTRL O  &hml LSHFT E             &alt_dot_en    &kp P    &hmr RSHFT D              &hmr LCTRL R      &hmr LALT S  &kp M
-&lt 8 C_PLAY_PAUSE  &kp X  &alt_        &alt_inch     &altcomma_en             &alt_slash     &kp B    &kp C                     &kp L             &kp W        &kp V  &kp Z
-                                        &lt 7 TAB     &arcane_left_en LSHFT 0  &lt 2 SPACE    &lt 3 T  &arcane_right_en RSHFT 0  &mt LCTRL ESCAPE
+                    &kp J  &kp Y  &kp A      &kp U                    &alt_min       &kp Q    &kp G                     &kp N                           &kp F  &kp K
+                    &kp H  &kp I  &kp O      &kp E                    &alt_dot_en    &kp P    &kp D                     &kp R                           &kp S  &kp M
+&lt 8 C_PLAY_PAUSE  &kp X  &alt_  &alt_inch  &altcomma_en             &alt_slash     &kp B    &kp C                     &kp L                           &kp W  &kp V  &kp Z
+                                  &lt 7 TAB  &arcane_left_en LSHFT 0  &lt 2 SPACE    &lt 3 T  &arcane_right_en RSHFT 0  &holdctrl_skalt LCTRL LEFT_ALT
             >;
         };
 
         ru {
             bindings = <
-           &kp A  &kp E        &kp F         &kp DOT                  &alt_min       &kp I      &kp V                     &kp Y         &kp R        &kp P
-           &kp Z  &hml LALT B  &hml LCTRL J  &hml LSHFT T             &alt_dot_ru    &kp U      &hmr LSHFT N              &hmr LCTRL H  &hmr LALT D  &kp X
-&lt 8 SQT  &kp Q  &kp S        &kp M         &altcomma_ru             &kp GRAVE      &kp COMMA  &kp L                     &kp K         &kp G        &kp SEMICOLON  &kp W
-                               &trans        &arcane_left_ru LSHFT 0  &trans         &lt 4 C    &arcane_right_ru RSHFT 0  &trans
+           &kp A  &kp E  &kp F   &kp DOT                  &alt_min       &kp I      &kp V                     &kp Y   &kp R  &kp P
+           &kp Z  &kp B  &kp J   &kp T                    &alt_dot_ru    &kp U      &kp N                     &kp H   &kp D  &kp X
+&lt 8 SQT  &kp Q  &kp S  &kp M   &altcomma_ru             &kp GRAVE      &kp COMMA  &kp L                     &kp K   &kp G  &kp SEMICOLON  &kp W
+                         &trans  &arcane_left_ru LSHFT 0  &trans         &lt 4 C    &arcane_right_ru RSHFT 0  &trans
             >;
         };
 
