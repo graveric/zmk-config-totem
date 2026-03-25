@@ -2133,7 +2133,7 @@
 
             bindings = <
               &kp RA(NUMBER_3)       &hml LC(LALT) N9        &hml LS(LA(LCTRL)) N8  &hml LS(LCTRL) N7    &alt_min            &kp PLUS           &hmr LS(LCTRL) F3  &hmr LA(LS(LCTRL)) F4  &hmr LA(LCTRL) F9  &kp F10
-              &hml LEFT_GUI PERCENT  &hml LEFT_ALT NUMBER_3  &hml LCTRL NUMBER_2    &hml LSHFT NUMBER_1  &kp HASH            &kp RA(MINUS)      &hmr LSHFT F2      &hmr LCTRL F5          &hmr LALT F8       &lt 10 F11
+              &hml LEFT_GUI PERCENT  &hml LEFT_ALT NUMBER_3  &hml LCTRL NUMBER_2    &hml LSHFT NUMBER_1  &kp EXCLAMATION     &kp RA(MINUS)      &hmr LSHFT F2      &hmr LCTRL F5          &hmr LALT F8       &lt 10 F11
 &kp LEFT_GUI  &kp RA(LS(GRAVE))      &kp NUMBER_6            &kp N5                 &kp NUMBER_4         &kp RA(NUMBER_4)    &kp RA(SEMICOLON)  &kp F1             &kp F6                 &kp F7             &hmr LEFT_GUI F12  &kp EQUAL
                                                              &kp RA(PERIOD)         &kp RA(COMMA)        &lt 11 N0           &trans             &trans             &trans
             >;
