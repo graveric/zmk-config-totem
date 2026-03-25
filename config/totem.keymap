@@ -1118,7 +1118,7 @@
         alt_slash_ru: alt_slash_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "ALT_SLASH_RU";
-            bindings = <&ctrl_slash_ru>, <&kp RA(NUMBER_4)>;
+            bindings = <&ctrl_slash_ru>, <&kp AT_SIGN>;
 
             #binding-cells = <0>;
             mods = <(MOD_LALT)>;
@@ -1470,6 +1470,11 @@
             bindings = <&copy_string>;
             key-positions = <22 23>;
             layers = <2>;
+        };
+
+        not_equal {
+            bindings = <&not_equal_macro>;
+            key-positions = <5 15>;
         };
     };
 
@@ -2026,6 +2031,13 @@
                 <&macro_wait_time 30>;
 
             label = "EN_QUEX";
+        };
+
+        not_equal_macro: not_equal {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EXCL &kp EQUAL>;
+            label = "NOT_EQUAL";
         };
     };
 
