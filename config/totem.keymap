@@ -1019,7 +1019,7 @@
         ctrl_dot_en: ctrl_dot_en {
             compatible = "zmk,behavior-mod-morph";
             label = "CTRL_DOT_EN";
-            bindings = <&up_dot>, <&kp LC(COLON)>;
+            bindings = <&up_dot>, <&kp COLON>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
@@ -1091,7 +1091,7 @@
         ctrl_dot_ru: ctrl_dot_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "CTRL_DOT_RU";
-            bindings = <&up_dot_ru>, <&kp LC(CARET)>;
+            bindings = <&up_dot_ru>, <&kp CARET>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_RCTL)>;
