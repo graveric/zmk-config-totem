@@ -1250,6 +1250,19 @@
             require-prior-idle-ms = <150>;
             flavor = "balanced";
         };
+
+        layer_dashtap: layer_dashtap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYER_DASHTAP";
+            bindings = <&lt>, <&emdash_spaced>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <150>;
+            quick-tap-ms = <125>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+        };
     };
 
     combos {
@@ -2039,6 +2052,39 @@
             bindings = <&kp EXCL &kp EQUAL>;
             label = "NOT_EQUAL";
         };
+
+        en_emdash_spaced: en_emdash_spaced {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp SPACE>,
+                <&macro_wait_time 5>,
+                <&en_emdash>,
+                <&macro_wait_time 5>,
+                <&kp SPACE>;
+
+            label = "EN_EMDASH_SPACED";
+        };
+
+        ru_emdash_spaced: ru_emdash_spaced {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp SPACE>,
+                <&macro_wait_time 5>,
+                <&ru_emdash>,
+                <&macro_wait_time 5>,
+                <&kp SPACE>;
+
+            label = "RU_EMDASH_SPACED";
+        };
+
+        emdash_spaced: emdash_spaced {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp RA(MINUS) &kp SPACE>;
+            label = "EMDASH_SPACED";
+        };
     };
 
     keymap {
@@ -2120,10 +2166,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-              &kp RA(NUMBER_3)       &kp N9              &kp N8               &kp N7               &alt_min           &kp PLUS           &hmr LS(LCTRL) F3  &hmr LS(LA(LCTRL)) F4  &hmr LA(LCTRL) F9  &kp F10
-              &hml LEFT_GUI PERCENT  &hml LALT NUMBER_3  &hml LCTRL NUMBER_2  &hml LSHFT NUMBER_1  &kp EXCLAMATION    &kp RA(MINUS)      &hmr RSHFT F2      &hmr LCTRL F5          &hmr LALT F8       &lt 9 F11
-&kp LEFT_GUI  &kp TILDE              &kp NUMBER_6        &kp N5               &kp NUMBER_4         &kp DLLR           &kp RA(SEMICOLON)  &kp F1             &kp F6                 &kp F7             &hmr LEFT_GUI F12  &kp LC(EQUAL)
-                                                         &kp RA(PERIOD)       &kp RA(COMMA)        &lt 11 N0          &trans             &trans             &trans
+              &kp F10            &kp F9        &kp F4          &kp F3         &alt_min               &kp PLUS           &kp N7               &kp N8               &kp N9              &kp RA(NUMBER_3)
+              &hml LEFT_GUI F11  &hml LALT F8  &hml LCTRL F5   &hml LSHFT F2  &kp EXCLAMATION        &kp N0             &hmr RSHFT NUMBER_1  &hmr LCTRL NUMBER_2  &hmr LALT NUMBER_3  &hmr LEFT_GUI PERCENT
+&kp LEFT_GUI  &kp F12            &kp F7        &kp F6          &kp F1         &kp DLLR               &kp RA(SEMICOLON)  &kp NUMBER_4         &kp N5               &lt 9 NUMBER_6      &kp TILDE              &kp LC(EQUAL)
+                                               &kp RA(PERIOD)  &kp RA(COMMA)  &layer_dashtap 11 0    &trans             &trans               &trans
             >;
         };
 
@@ -2144,10 +2190,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-              &kp RA(NUMBER_3)       &hml LC(LALT) N9        &hml LS(LA(LCTRL)) N8  &hml LS(LCTRL) N7    &alt_min            &kp PLUS           &hmr LS(LCTRL) F3  &hmr LA(LS(LCTRL)) F4  &hmr LA(LCTRL) F9  &kp F10
-              &hml LEFT_GUI PERCENT  &hml LEFT_ALT NUMBER_3  &hml LCTRL NUMBER_2    &hml LSHFT NUMBER_1  &kp EXCLAMATION     &kp RA(MINUS)      &hmr LSHFT F2      &hmr LCTRL F5          &hmr LALT F8       &lt 10 F11
-&kp LEFT_GUI  &kp RA(LS(GRAVE))      &kp NUMBER_6            &kp N5                 &kp NUMBER_4         &kp RA(NUMBER_4)    &kp RA(SEMICOLON)  &kp F1             &kp F6                 &kp F7             &hmr LEFT_GUI F12  &kp EQUAL
-                                                             &kp RA(PERIOD)         &kp RA(COMMA)        &lt 11 N0           &trans             &trans             &trans
+              &kp F10            &kp F9            &kp F4          &kp F3         &alt_min               &kp PLUS           &kp N7               &kp N8               &kp N9              &kp RA(NUMBER_3)
+              &hml LEFT_GUI F11  &hml LEFT_ALT F8  &hml LCTRL F5   &hml LSHFT F2  &kp EXCLAMATION        &kp N0             &hmr LSHFT NUMBER_1  &hmr LCTRL NUMBER_2  &hmr LALT NUMBER_3  &hmr LEFT_GUI PERCENT
+&kp LEFT_GUI  &kp F12            &kp F7            &kp F6          &kp F1         &kp RA(NUMBER_4)       &kp RA(SEMICOLON)  &kp NUMBER_4         &kp N5               &lt 10 NUMBER_6     &kp RA(LS(GRAVE))      &kp EQUAL
+                                                   &kp RA(PERIOD)  &kp RA(COMMA)  &layer_dashtap 11 0    &trans             &trans               &trans
             >;
         };
 
@@ -2219,27 +2265,27 @@
 
         Fadein {
             bindings = <
-        &trans  &trans  &trans   &trans     &trans      &trans          &trans          &trans  &trans  &trans
-        &trans  &trans  &trans   &en_tenge  &en_mngt    &en_emdash      &en_endash      &trans  &trans  &trans
-&trans  &trans  &trans  &trans   &en_quex   &trans      &en_hyperminus  &en_figuredash  &trans  &trans  &trans  &trans
-                        &en_rdq  &en_ldq    &trans      &trans          &trans          &trans
+        &trans  &trans  &trans   &trans     &trans               &trans          &trans          &trans  &trans  &trans
+        &trans  &trans  &trans   &en_tenge  &en_mngt             &en_emdash      &en_endash      &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &en_quex   &trans               &en_hyperminus  &en_figuredash  &trans  &trans  &trans  &trans
+                        &en_rdq  &en_ldq    &en_emdash_spaced    &trans          &trans          &trans
             >;
         };
 
         Fadeinru {
             bindings = <
-        &trans  &trans  &trans   &trans     &trans      &trans          &trans          &trans  &trans  &trans
-        &trans  &trans  &trans   &ru_tenge  &ru_mngt    &ru_emdash      &ru_endash      &trans  &trans  &trans
-&trans  &trans  &trans  &trans   &ru_quex   &trans      &ru_hypenminus  &ru_figuredash  &trans  &trans  &trans  &trans
-                        &ru_rdq  &ru_ldq    &trans      &trans          &trans          &trans
+        &trans  &trans  &trans   &trans     &trans               &trans          &trans          &trans  &trans  &trans
+        &trans  &trans  &trans   &ru_tenge  &ru_mngt             &ru_emdash      &ru_endash      &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &ru_quex   &trans               &ru_hypenminus  &ru_figuredash  &trans  &trans  &trans  &trans
+                        &ru_rdq  &ru_ldq    &ru_emdash_spaced    &trans          &trans          &trans
             >;
         };
 
         unicode {
             bindings = <
-        &kp LALT   &kp RA(E)  &kp RA(F)  &kp RA(X)  &kp RA(I)               &kp RA(D)  &kp RA(A)  &kp RA(Y)     &kp RA(R)  &kp RA(V)
-        &kp RA(H)  &kp RA(B)  &kp RA(J)  &kp LSHFT  &kp RS(RA(NUMBER_6))    &kp RA(U)  &kp LSHFT  &kp RA(FSLH)  &kp RA(C)  &kp RA(N5)
-&trans  &kp LGUI   &kp RA(S)  &kp RA(O)  &kp RA(Z)  &kp RA(LS(NUMBER_3))    &kp ENTER  &kp BSPC   &kp DEL       &kp INS    &kp PRINTSCREEN  &trans
+        &kp LALT   &kp RA(E)  &kp RA(F)  &kp RA(X)  &kp RA(I)               &kp RA(D)  &kp RA(A)  &kp RA(Y)          &kp RA(R)      &kp RA(V)
+        &kp RA(H)  &kp RA(B)  &kp RA(J)  &kp LSHFT  &kp RS(RA(NUMBER_6))    &kp RA(U)  &kp LSHFT  &kp RA(LS(MINUS))  &kp RA(C)      &kp RA(N5)
+&trans  &kp LGUI   &kp RA(S)  &kp RA(O)  &kp RA(Z)  &kp RA(MINUS)           &kp ENTER  &kp BSPC   &kp DEL            &kp RA(SLASH)  &kp RA(LS(NUMBER_3))  &trans
                               &trans     &trans     &trans                  &trans     &trans     &trans
             >;
         };
