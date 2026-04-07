@@ -2064,16 +2064,16 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp SPACE>,
-                <&macro_wait_time 30>,
                 <&KB_EN>,
-                <&macro_wait_time 30>,
+                <&macro_wait_time 50>,
+                <&kp SPACE>,
+                <&macro_wait_time 5>,
                 <&kp LS(LC(U))>,
                 <&macro_wait_time 10>,
                 <&kp N2 &kp N0 &kp N1 &kp N4 &kp ENTER>,
                 <&macro_wait_time 30>,
                 <&KB_RU>,
-                <&macro_wait_time 30>,
+                <&macro_wait_time 5>,
                 <&kp SPACE>;
 
             label = "SPACED_RU_EMDASH";
@@ -2084,7 +2084,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp SPACE>,
-                <&macro_wait_time 30>,
+                <&macro_wait_time 10>,
                 <&kp LS(LC(U))>,
                 <&macro_wait_time 10>,
                 <&kp N2 &kp N0 &kp N1 &kp N4 &kp ENTER>,
