@@ -2070,10 +2070,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp SPACE>,
-                <&macro_wait_time 5>,
+                <&kp X>,
+                <&macro_wait_time 30>,
                 <&ru_emdash>,
-                <&macro_wait_time 5>,
+                <&macro_wait_time 30>,
                 <&kp SPACE>;
 
             label = "RU_EMDASH_SPACED";
