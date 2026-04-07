@@ -2053,37 +2053,45 @@
             label = "NOT_EQUAL";
         };
 
-        en_emdash_spaced: en_emdash_spaced {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp SPACE>,
-                <&macro_wait_time 5>,
-                <&en_emdash>,
-                <&macro_wait_time 5>,
-                <&kp SPACE>;
-
-            label = "EN_EMDASH_SPACED";
-        };
-
-        ru_emdash_spaced: ru_emdash_spaced {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&kp X>,
-                <&macro_wait_time 30>,
-                <&ru_emdash>,
-                <&macro_wait_time 30>,
-                <&kp SPACE>;
-
-            label = "RU_EMDASH_SPACED";
-        };
-
         emdash_spaced: emdash_spaced {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp SPACE &kp RA(MINUS) &kp SPACE>;
             label = "EMDASH_SPACED";
+        };
+
+        spaced_ru_emdash: spaced_ru_emdash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp SPACE>,
+                <&macro_wait_time 30>,
+                <&KB_EN>,
+                <&macro_wait_time 30>,
+                <&kp LS(LC(U))>,
+                <&macro_wait_time 10>,
+                <&kp N2 &kp N0 &kp N1 &kp N4 &kp ENTER>,
+                <&macro_wait_time 30>,
+                <&KB_RU>,
+                <&macro_wait_time 30>,
+                <&kp SPACE>;
+
+            label = "SPACED_RU_EMDASH";
+        };
+
+        spaced_en_emdash: spaced_en_emdash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp SPACE>,
+                <&macro_wait_time 30>,
+                <&kp LS(LC(U))>,
+                <&macro_wait_time 10>,
+                <&kp N2 &kp N0 &kp N1 &kp N4 &kp ENTER>,
+                <&macro_wait_time 10>,
+                <&kp SPACE>;
+
+            label = "SPACED_EN_EMDASH";
         };
     };
 
@@ -2268,7 +2276,7 @@
         &trans  &trans  &trans   &trans     &trans               &trans          &trans          &trans  &trans  &trans
         &trans  &trans  &trans   &en_tenge  &en_mngt             &en_emdash      &en_endash      &trans  &trans  &trans
 &trans  &trans  &trans  &trans   &en_quex   &trans               &en_hyperminus  &en_figuredash  &trans  &trans  &trans  &trans
-                        &en_rdq  &en_ldq    &en_emdash_spaced    &trans          &trans          &trans
+                        &en_rdq  &en_ldq    &spaced_en_emdash    &trans          &trans          &trans
             >;
         };
 
@@ -2277,7 +2285,7 @@
         &trans  &trans  &trans   &trans     &trans               &trans          &trans          &trans  &trans  &trans
         &trans  &trans  &trans   &ru_tenge  &ru_mngt             &ru_emdash      &ru_endash      &trans  &trans  &trans
 &trans  &trans  &trans  &trans   &ru_quex   &trans               &ru_hypenminus  &ru_figuredash  &trans  &trans  &trans  &trans
-                        &ru_rdq  &ru_ldq    &ru_emdash_spaced    &trans          &trans          &trans
+                        &ru_rdq  &ru_ldq    &spaced_ru_emdash    &trans          &trans          &trans
             >;
         };
 
