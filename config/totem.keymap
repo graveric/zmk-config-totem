@@ -261,6 +261,12 @@
                 bindings = <&kp Z>;
             };
 
+            akt_gd {
+                trigger-keys = <U>;
+                max-prior-idle-ms = <1000>;
+                bindings = <&kp L>;
+            };
+
             akt_oo {
                 trigger-keys = <J>;
                 max-prior-idle-ms = <1000>;
