@@ -895,7 +895,7 @@
         upcomma_en: upcomma_en {
             compatible = "zmk,behavior-mod-morph";
             label = "UPCOMMA_EN";
-            bindings = <&commaspace_en>, <&kp QUESTION>;
+            bindings = <&gm_commaspace_en>, <&kp QUESTION>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -904,7 +904,7 @@
         upcomma_ru: upcomma_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "UPCOMMA_RU";
-            bindings = <&commspace_ru>, <&kp AMPERSAND>;
+            bindings = <&gm_commaspace_ru>, <&kp AMPERSAND>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -1269,6 +1269,78 @@
             require-prior-idle-ms = <150>;
             hold-trigger-on-release;
         };
+
+        gr_dot_en: gr_dot_en {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GR_DOT_EN";
+            bindings = <&kp PERIOD>, <&gm_dot_space_shift>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        gr_dot_ru: gr_dot_ru {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GR_DOT_RU";
+            bindings = <&kp SLASH>, <&gm_dot_space_shift>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        gr_comma_en: gr_comma_en {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GR_COMMA_EN";
+            bindings = <&gm_commaspace_en>, <&kp RA(LS(N5))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        gr_comma_ru: gr_comma_ru {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GR_COMMA_RU";
+            bindings = <&gm_commaspace_ru>, <&kp RA(LS(N5))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        gr_minus: gr_minus {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GR_MINUS";
+            bindings = <&kp MINUS>, <&kp KP_PLUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        gr_slash: gr_slash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GR_SLASH";
+            bindings = <&kp RA(LS(BACKSLASH))>, <&kp ASTERISK>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        gr_quote: gr_quote {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GR_QUOTE";
+            bindings = <&kp RA(NUMBER_2)>, <&kp RA(LS(NUMBER_2))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        gr_under: gr_under {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GR_UNDER";
+            bindings = <&kp UNDERSCORE>, <&kp RA(GRAVE)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     combos {
@@ -1533,14 +1605,14 @@
             label = "KB_RU";
         };
 
-        commaspace_en: dotspace_en {
+        gm_commaspace_en: dotspace_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp COMMA &kp SPACE>;
             label = "DOTSPACE_EN";
         };
 
-        commspace_ru: dotspace_ru {
+        gm_commaspace_ru: dotspace_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp QUESTION &kp SPACE>;
@@ -2109,6 +2181,13 @@
                 <&kp SPACE>;
 
             label = "SPACED_EN_EMDASH";
+        };
+
+        gm_dot_space_shift: gm_dot_space_shift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(LS(C)) &kp SPACE &sk LSHFT>;
+            label = "GM_DOT_SPACE_SHIFT";
         };
     };
 
