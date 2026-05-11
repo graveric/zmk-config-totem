@@ -856,78 +856,6 @@
             };
         };
 
-        up_: up_ {
-            compatible = "zmk,behavior-mod-morph";
-            label = "UP_";
-            bindings = <&kp UNDERSCORE>, <&kp AMPERSAND>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
-        };
-
-        up_min: up_min {
-            compatible = "zmk,behavior-mod-morph";
-            label = "UP_MIN";
-            bindings = <&kp MINUS>, <&kp LPAR>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        up_slash: up_slash {
-            compatible = "zmk,behavior-mod-morph";
-            label = "UP_SLASH";
-            bindings = <&kp SLASH>, <&kp ASTERISK>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        up_dot: up_dot {
-            compatible = "zmk,behavior-mod-morph";
-            label = "UP_DOT";
-            bindings = <&kp PERIOD>, <&kp SEMI>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        upcomma_en: upcomma_en {
-            compatible = "zmk,behavior-mod-morph";
-            label = "UPCOMMA_EN";
-            bindings = <&gm_commaspace_en>, <&kp QUESTION>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        upcomma_ru: upcomma_ru {
-            compatible = "zmk,behavior-mod-morph";
-            label = "UPCOMMA_RU";
-            bindings = <&gm_commaspace_ru>, <&kp AMPERSAND>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        altcomma_en: altcomma_en {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ALTCOMMA_EN";
-            bindings = <&ctrl_comma_en>, <&kp COMMA>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-        altcomma_ru: altcomma_ru {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ALTCOMMA_RU";
-            bindings = <&ctrl_comma_ru>, <&kp QUESTION>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
         rep_nav: rep_nav {
             compatible = "zmk,behavior-hold-tap";
             label = "REP_NAV";
@@ -942,7 +870,7 @@
         rucomma_nav: rucomma_nav {
             compatible = "zmk,behavior-hold-tap";
             label = "RUCOMMA_NAV";
-            bindings = <&mo>, <&altcomma_ru>;
+            bindings = <&mo>, <&none>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
@@ -950,238 +878,13 @@
             hold-while-undecided;
         };
 
-        alt_min: alt_min {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ALT_MIN";
-            bindings = <&ctrl_min>, <&kp RA(NUMBER_6)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-        alt_slash: alt_slash {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ALT_SLASH";
-            bindings = <&ctrl_slash>, <&kp AT_SIGN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-        alt_: alt_ {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ALT_";
-            bindings = <&ctrl_>, <&kp BACKSLASH>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-        alt_dot_en: alt_dot_en {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ALT_DOT_EN";
-            bindings = <&ctrl_dot_en>, <&kp HASH>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-        ru_dot: ru_dot {
-            compatible = "zmk,behavior-mod-morph";
-            label = "RU_DOT";
-            bindings = <&kp SLASH>, <&kp DLLR>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        alt_dot_ru: alt_dot_ru {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ALT_DOT_RU";
-            bindings = <&ctrl_dot_ru>, <&kp HASH>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-        ctrl_min: ctrl_min {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CTRL_MIN";
-            bindings = <&up_min>, <&kp RPAR>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-
-        ctrl_comma_en: ctrl_comma_en {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CTRL_COMMA_EN";
-            bindings = <&upcomma_en>, <&kp EQUAL>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-
-        ctrl_dot_en: ctrl_dot_en {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CTRL_DOT_EN";
-            bindings = <&up_dot>, <&kp COLON>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-
-        ctrl_: ctrl_ {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CTRL_";
-            bindings = <&up_>, <&kp PIPE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-
-        ctrl_slash: ctrl_slash {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CTRL_SLASH";
-            bindings = <&up_slash>, <&kp GT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-
-        up_inch: up_inch {
-            compatible = "zmk,behavior-mod-morph";
-            label = "UP_INCH";
-            bindings = <&kp DOUBLE_QUOTES>, <&kp SQT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        ctrl_inch: ctrl_inch {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CTRL_INCH";
-            bindings = <&up_inch>, <&kp LT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-
-        alt_inch: alt_inch {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ALT_INCH";
-            bindings = <&ctrl_inch>, <&kp GRAVE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-        ctrl_comma_ru: ctrl_comma_ru {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CTRL_COMMA_RU";
-            bindings = <&upcomma_ru>, <&kp EQUAL>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-
         up_dot_ru: up_dot_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "UP_DOT_RU";
-            bindings = <&ru_dot>, <&kp DOLLAR>;
+            bindings = <&none>, <&kp DOLLAR>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        ctrl_dot_ru: ctrl_dot_ru {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CTRL_DOT_RU";
-            bindings = <&up_dot_ru>, <&kp CARET>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-
-        up_slash_ru: up_slash_ru {
-            compatible = "zmk,behavior-mod-morph";
-            label = "UP_SLASH_RU";
-            bindings = <&ru_slash>, <&kp ASTRK>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        ctrl_slash_ru: ctrl_slash_ru {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CTRL_SLASH_RU";
-            bindings = <&up_slash_ru>, <&kp RA(LS(L))>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-
-        alt_slash_ru: alt_slash_ru {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ALT_SLASH_RU";
-            bindings = <&ctrl_slash_ru>, <&kp AT_SIGN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-        ru_up_: ru_up_ {
-            compatible = "zmk,behavior-mod-morph";
-            label = "RU_UP_";
-            bindings = <&kp UNDERSCORE>, <&kp RA(N7)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RSFT|MOD_LSFT)>;
-        };
-
-        ctrl_ru_: ctrl_ru_ {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CTRL_RU_";
-            bindings = <&ru_up_>, <&kp RA(BACKSLASH)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_RCTL|MOD_LCTL)>;
-        };
-
-        alt_ru_: alt_ru_ {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ALT_RU_";
-            bindings = <&ctrl_ru_>, <&kp BACKSLASH>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
-        ru_upinch: ru_upinch {
-            compatible = "zmk,behavior-mod-morph";
-            label = "RU_UPINCH";
-            bindings = <&kp RA(NUMBER_2)>, <&ru_apostrophe>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        ctrl_ru_inch: ctrl_ru_inch {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CTRL_RU_INCH";
-            bindings = <&ru_upinch>, <&kp RA(L)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-
-        alt_ru_inch: alt_ru_inch {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ALT_RU_INCH";
-            bindings = <&ctrl_ru_inch>, <&kp RA(GRAVE)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
         };
 
         lt_bk: lt_bk {
@@ -1377,13 +1080,13 @@
         };
 
         undr {
-            bindings = <&alt_ru_>;
+            bindings = <&gr_under>;
             key-positions = <13 14>;
             layers = <1>;
         };
 
         rusinch {
-            bindings = <&alt_ru_inch>;
+            bindings = <&gr_quote>;
             key-positions = <7 8>;
             layers = <1>;
         };
@@ -1411,13 +1114,13 @@
         };
 
         ru_rbrc {
-            bindings = <&ru_rbr>;
+            bindings = <&kp LS(RA(LEFT_BRACKET))>;
             key-positions = <17 7>;
             layers = <1>;
         };
 
         ru_lbrc {
-            bindings = <&ru_lbr>;
+            bindings = <&kp LS(RA(RIGHT_BRACKET))>;
             key-positions = <16 6>;
             layers = <1>;
         };
@@ -1428,14 +1131,8 @@
             layers = <1>;
         };
 
-        ru_minus {
-            bindings = <&alt_min>;
-            key-positions = <3 4>;
-            layers = <1>;
-        };
-
         ru_sl {
-            bindings = <&alt_slash_ru>;
+            bindings = <&gr_slash>;
             key-positions = <24 25>;
         };
 
@@ -1462,7 +1159,7 @@
             key-positions = <12 2>;
         };
 
-        f_shmn {
+        kh {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <6 7>;
             layers = <1>;
@@ -1490,7 +1187,7 @@
             key-positions = <36 37>;
         };
 
-        tvrd {
+        ye {
             bindings = <&kp SQT>;
             key-positions = <3 2>;
             layers = <1>;
@@ -1578,6 +1275,18 @@
             bindings = <&sl 10>;
             key-positions = <12 11>;
         };
+
+        ru_slp {
+            bindings = <&kp RA(LEFT_BRACKET)>;
+            key-positions = <15 16>;
+            layers = <1>;
+        };
+
+        ru_srp {
+            bindings = <&kp RA(RIGHT_BRACKET)>;
+            key-positions = <15 16>;
+            layers = <1>;
+        };
     };
 
     macros {
@@ -1619,71 +1328,6 @@
             label = "DOTSPACE_RU";
         };
 
-        ru_dollar: ru_dollar {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&KB_EN>,
-                <&macro_wait_time 30>,
-                <&kp LS(NUMBER_4)>,
-                <&macro_wait_time 30>,
-                <&KB_RU>;
-
-            label = "RU_DOLLAR";
-        };
-
-        ru_hash: ru_hash {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&KB_EN>,
-                <&macro_wait_time 30>,
-                <&kp HASH>,
-                <&macro_wait_time 30>,
-                <&KB_RU>;
-
-            label = "RU_HASH";
-        };
-
-        ru_pipe: ru_pipe {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&KB_EN>,
-                <&macro_wait_time 30>,
-                <&kp PIPE>,
-                <&macro_wait_time 30>,
-                <&KB_RU>;
-
-            label = "RU_PIPE";
-        };
-
-        ru_tilda: ru_tilda {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&KB_EN>,
-                <&macro_wait_time 30>,
-                <&kp TILDE>,
-                <&macro_wait_time 30>,
-                <&KB_RU>;
-
-            label = "RU_TILDA";
-        };
-
-        ru_grave: ru_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&KB_EN>,
-                <&macro_wait_time 30>,
-                <&kp GRAVE>,
-                <&macro_wait_time 30>,
-                <&KB_RU>;
-
-            label = "RU_GRAVE";
-        };
-
         ru_emdash: ru_emdash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1709,19 +1353,6 @@
                 <&macro_wait_time 10>;
 
             label = "EN_EMDASH";
-        };
-
-        ru_at: ru_at {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&KB_EN>,
-                <&macro_wait_time 30>,
-                <&kp AT_SIGN>,
-                <&macro_wait_time 30>,
-                <&KB_RU>;
-
-            label = "RU_AT";
         };
 
         en_rdq: en_rdq {
@@ -1804,32 +1435,6 @@
             label = "RU_RBR";
         };
 
-        ru_lt: ru_lt {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&KB_EN>,
-                <&macro_wait_time 10>,
-                <&kp LESS_THAN>,
-                <&macro_wait_time 10>,
-                <&KB_RU>;
-
-            label = "RU_LT";
-        };
-
-        ru_gt: ru_gt {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&KB_EN>,
-                <&macro_wait_time 10>,
-                <&kp GREATER_THAN>,
-                <&macro_wait_time 10>,
-                <&KB_RU>;
-
-            label = "RU_GT";
-        };
-
         en_endash: en_endash {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -1855,84 +1460,6 @@
                 <&KB_RU>;
 
             label = "RU_ENDASH";
-        };
-
-        en_number: en_number {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&KB_RU>,
-                <&macro_wait_time 10>,
-                <&kp LS(NUMBER_3)>,
-                <&macro_wait_time 10>,
-                <&KB_EN>;
-
-            label = "EN_NUMBER";
-        };
-
-        ru_caret: ru_krs {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&KB_EN>,
-                <&macro_wait_time 10>,
-                <&kp CARET>,
-                <&macro_wait_time 10>,
-                <&KB_RU>;
-
-            label = "RU_KRS";
-        };
-
-        ru_apostrophe: ru_up_inch {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&KB_EN>,
-                <&macro_wait_time 40>,
-                <&kp SQT>,
-                <&macro_wait_time 30>,
-                <&KB_RU>;
-
-            label = "RU_UP_INCH";
-        };
-
-        ru_amprsnd: ru_amprsnd {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&KB_EN>,
-                <&macro_wait_time 30>,
-                <&kp LS(N7)>,
-                <&macro_wait_time 30>,
-                <&KB_RU>;
-
-            label = "RU_AMPRSND";
-        };
-
-        ru_slash: ru_slash {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&KB_EN>,
-                <&macro_wait_time 40>,
-                <&kp SLASH>,
-                <&macro_wait_time 40>,
-                <&KB_RU>;
-
-            label = "RU_SLASH";
-        };
-
-        ru_bkslsh: ru_backslash {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&KB_EN>,
-                <&macro_wait_time 10>,
-                <&kp BACKSLASH>,
-                <&macro_wait_time 10>,
-                <&KB_RU>;
-
-            label = "RU_BACKSLASH";
         };
 
         new_line_down: new_line_down {
@@ -2213,19 +1740,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                    &kp J  &kp Y  &kp A         &kp U                    &alt_min       &kp Q    &kp G                     &kp N                           &kp F  &kp K
-                    &kp H  &kp I  &hml LCTRL O  &hml LSHFT E             &alt_dot_en    &kp P    &hmr RSHFT D              &hmr LCTRL R                    &kp S  &kp M
-&lt 8 C_PLAY_PAUSE  &kp X  &alt_  &alt_inch     &altcomma_en             &alt_slash     &kp B    &kp C                     &kp L                           &kp W  &kp V  &kp Z
-                                  &lt 7 TAB     &arcane_left_en LSHFT 0  &lt 2 SPACE    &lt 3 T  &arcane_right_en RSHFT 0  &holdctrl_skalt LCTRL LEFT_ALT
+                    &kp J  &kp Y      &kp A         &kp U                    &gr_minus      &kp Q    &kp G                     &kp N                           &kp F  &kp K
+                    &kp H  &kp I      &hml LCTRL O  &hml LSHFT E             &gr_dot_en     &kp P    &hmr RSHFT D              &hmr LCTRL R                    &kp S  &kp M
+&lt 8 C_PLAY_PAUSE  &kp X  &gr_under  &gr_quote     &gr_comma_en             &gr_slash      &kp B    &kp C                     &kp L                           &kp W  &kp V  &kp Z
+                                      &lt 7 TAB     &arcane_left_en LSHFT 0  &lt 2 SPACE    &lt 3 T  &arcane_right_en RSHFT 0  &holdctrl_skalt LCTRL LEFT_ALT
             >;
         };
 
         ru {
             bindings = <
-           &kp A  &kp E  &kp F         &kp DOT                  &alt_min       &kp I      &kp V                     &kp Y         &kp R  &kp P
-           &kp Z  &kp B  &hml LCTRL J  &hml LSHFT T             &alt_dot_ru    &kp U      &hmr RSHFT N              &hmr LCTRL H  &kp D  &kp X
-&lt 8 SQT  &kp Q  &kp S  &kp M         &altcomma_ru             &kp GRAVE      &kp COMMA  &kp L                     &kp K         &kp G  &kp SEMICOLON  &kp W
-                         &trans        &arcane_left_ru LSHFT 0  &trans         &lt 4 C    &arcane_right_ru RSHFT 0  &trans
+           &kp A  &kp E  &kp F         &kp DOT                  &gr_minus     &kp I      &kp V                     &kp Y         &kp R  &kp P
+           &kp Z  &kp B  &hml LCTRL J  &hml LSHFT T             &gr_dot_ru    &kp U      &hmr RSHFT N              &hmr LCTRL H  &kp D  &kp X
+&lt 8 SQT  &kp Q  &kp S  &kp M         &gr_comma_ru             &kp GRAVE     &kp COMMA  &kp L                     &kp K         &kp G  &kp SEMICOLON  &kp W
+                         &trans        &arcane_left_ru LSHFT 0  &trans        &lt 4 C    &arcane_right_ru RSHFT 0  &trans
             >;
         };
 
@@ -2270,7 +1797,7 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-              &kp F10            &kp F9        &kp F4          &kp F3         &alt_min               &kp PLUS           &kp N7               &kp N8               &kp N9              &kp RA(NUMBER_3)
+              &kp F10            &kp F9        &kp F4          &kp F3         &none                  &kp PLUS           &kp N7               &kp N8               &kp N9              &kp RA(NUMBER_3)
               &hml LEFT_GUI F11  &hml LALT F8  &hml LCTRL F5   &hml LSHFT F2  &kp EXCLAMATION        &kp N0             &hmr RSHFT NUMBER_1  &hmr LCTRL NUMBER_2  &hmr LALT NUMBER_3  &hmr LEFT_GUI PERCENT
 &kp LEFT_GUI  &kp F12            &kp F7        &kp F6          &kp F1         &kp DLLR               &kp RA(SEMICOLON)  &kp NUMBER_4         &kp N5               &lt 9 NUMBER_6      &kp TILDE              &kp LC(EQUAL)
                                                &kp RA(PERIOD)  &kp RA(COMMA)  &layer_dashtap 11 0    &trans             &trans               &trans
@@ -2294,7 +1821,7 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-              &kp F10            &kp F9            &kp F4          &kp F3         &alt_min               &kp PLUS           &kp N7               &kp N8               &kp N9              &kp RA(NUMBER_3)
+              &kp F10            &kp F9            &kp F4          &kp F3         &none                  &kp PLUS           &kp N7               &kp N8               &kp N9              &kp RA(NUMBER_3)
               &hml LEFT_GUI F11  &hml LEFT_ALT F8  &hml LCTRL F5   &hml LSHFT F2  &kp EXCLAMATION        &kp N0             &hmr LSHFT NUMBER_1  &hmr LCTRL NUMBER_2  &hmr LALT NUMBER_3  &hmr LEFT_GUI PERCENT
 &kp LEFT_GUI  &kp F12            &kp F7            &kp F6          &kp F1         &kp RA(NUMBER_4)       &kp RA(SEMICOLON)  &kp NUMBER_4         &kp N5               &lt 10 NUMBER_6     &kp RA(LS(GRAVE))      &kp EQUAL
                                                    &kp RA(PERIOD)  &kp RA(COMMA)  &layer_dashtap 11 0    &trans             &trans               &trans
