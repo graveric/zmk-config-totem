@@ -947,32 +947,6 @@
             tapping-term-ms = <200>;
         };
 
-        holdctrl_skalt: holdctrl_skalt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLDCTRL_SKALT";
-            bindings = <&kp>, <&sk>;
-
-            #binding-cells = <2>;
-            hold-trigger-on-release;
-            tapping-term-ms = <170>;
-            quick-tap-ms = <125>;
-            require-prior-idle-ms = <150>;
-            flavor = "balanced";
-        };
-
-        layer_dashtap: layer_dashtap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_DASHTAP";
-            bindings = <&lt>, <&emdash_spaced>;
-
-            #binding-cells = <2>;
-            flavor = "balanced";
-            tapping-term-ms = <150>;
-            quick-tap-ms = <125>;
-            require-prior-idle-ms = <150>;
-            hold-trigger-on-release;
-        };
-
         gr_dot_en: gr_dot_en {
             compatible = "zmk,behavior-mod-morph";
             label = "GR_DOT_EN";
@@ -1040,6 +1014,15 @@
             compatible = "zmk,behavior-mod-morph";
             label = "GR_UNDER";
             bindings = <&kp UNDERSCORE>, <&kp RA(GRAVE)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        gr_sqp: gr_sqp {
+            compatible = "zmk,behavior-mod-morph";
+            label = "GR_SQP";
+            bindings = <&kp RA(LEFT_BRACKET)>, <&kp RA(RIGHT_BRACKET)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -1740,10 +1723,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                    &kp J  &kp Y      &kp A         &kp U                    &gr_minus      &kp Q    &kp G                     &kp N                           &kp F  &kp K
-                    &kp H  &kp I      &hml LCTRL O  &hml LSHFT E             &gr_dot_en     &kp P    &hmr RSHFT D              &hmr LCTRL R                    &kp S  &kp M
-&lt 8 C_PLAY_PAUSE  &kp X  &gr_under  &gr_quote     &gr_comma_en             &gr_slash      &kp B    &kp C                     &kp L                           &kp W  &kp V  &kp Z
-                                      &lt 7 TAB     &arcane_left_en LSHFT 0  &lt 2 SPACE    &lt 3 T  &arcane_right_en RSHFT 0  &holdctrl_skalt LCTRL LEFT_ALT
+                    &kp J  &kp Y      &kp A         &kp U                    &gr_minus      &kp Q    &kp G                     &kp N         &kp F  &kp K
+                    &kp H  &kp I      &hml LCTRL O  &hml LSHFT E             &gr_dot_en     &kp P    &hmr RSHFT D              &hmr LCTRL R  &kp S  &kp M
+&lt 8 C_PLAY_PAUSE  &kp X  &gr_under  &gr_quote     &gr_comma_en             &gr_slash      &kp B    &kp C                     &kp L         &kp W  &kp V  &kp Z
+                                      &lt 7 TAB     &arcane_left_en LSHFT 0  &lt 2 SPACE    &lt 3 T  &arcane_right_en RSHFT 0  &lt 11 ESC
             >;
         };
 
@@ -1752,7 +1735,7 @@
            &kp A  &kp E  &kp F         &kp DOT                  &gr_minus     &kp I      &kp V                     &kp Y         &kp R  &kp P
            &kp Z  &kp B  &hml LCTRL J  &hml LSHFT T             &gr_dot_ru    &kp U      &hmr RSHFT N              &hmr LCTRL H  &kp D  &kp X
 &lt 8 SQT  &kp Q  &kp S  &kp M         &gr_comma_ru             &kp GRAVE     &kp COMMA  &kp L                     &kp K         &kp G  &kp SEMICOLON  &kp W
-                         &trans        &arcane_left_ru LSHFT 0  &trans        &lt 4 C    &arcane_right_ru RSHFT 0  &trans
+                         &trans        &arcane_left_ru LSHFT 0  &trans        &lt 3 C    &arcane_right_ru RSHFT 0  &trans
             >;
         };
 
@@ -1776,55 +1759,26 @@
             &kp LS(DELETE)   &kp LS(HOME)  &kp LS(UP)      &kp LS(END)    &kp LC(LS(HOME))    &kp LC(HOME)  &kp HOME            &kp UP_ARROW    &kp END          &kp PAGE_UP
             &lt 5 LS(LC(K))  &kp LS(LEFT)  &kp LS(DOWN)    &kp LS(RIGHT)  &kp LS(LC(END))     &kp LC(END)   &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW  &lt 5 PG_DN
 &kp C_PREV  &mo 8            &cut_string   &new_line_down  &kp ESC        &kp DEL             &kp ENTER     &kp BACKSPACE       &kp DELETE      &kp INS          &kp PRINTSCREEN  &kp C_NEXT
-                                           &trans          &trans         &trans              &mo 11        &layer_sft 6 RSHFT  &kp LCTRL
+                                           &trans          &trans         &trans              &mo 4         &layer_sft 6 RSHFT  &kp LCTRL
             >;
         };
 
-        sym_en {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-
-            label = "SYM_EN";
-
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-            //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-            //             ┃     !     ┃     @     ┃     #     ┃     $     ┃     %     ┃   ┃     ˆ     ┃     &     ┃     Ü     ┃     '     ┃     "     ┃
-            //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃     Ä     ┃           ┃    SZ     ┃           ┃           ┃   ┃   MUTE    ┃   YEN     ┃   EURO    ┃  POUND    ┃     Ö     ┃
-            // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃           ┃  EMAIL1   ┃  EMAIL2   ┃           ┃           ┃           ┃   ┃   VOL-    ┃   VOL+    ┃   LAST    ┃   NEXT    ┃     \     ┃           ┃
-            // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-            //                                     ┃           ┃    GIF    ┃    ADJ    ┃   ┃           ┃           ┃           ┃
-            //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-
+        Sym1 {
             bindings = <
-              &kp F10            &kp F9        &kp F4          &kp F3         &none                  &kp PLUS           &kp N7               &kp N8               &kp N9              &kp RA(NUMBER_3)
-              &hml LEFT_GUI F11  &hml LALT F8  &hml LCTRL F5   &hml LSHFT F2  &kp EXCLAMATION        &kp N0             &hmr RSHFT NUMBER_1  &hmr LCTRL NUMBER_2  &hmr LALT NUMBER_3  &hmr LEFT_GUI PERCENT
-&kp LEFT_GUI  &kp F12            &kp F7        &kp F6          &kp F1         &kp DLLR               &kp RA(SEMICOLON)  &kp NUMBER_4         &kp N5               &lt 9 NUMBER_6      &kp TILDE              &kp LC(EQUAL)
-                                               &kp RA(PERIOD)  &kp RA(COMMA)  &layer_dashtap 11 0    &trans             &trans               &trans
+        &kp BACKSLASH     &kp RA(E)  &kp RA(F)  &kp RA(COMMA)         &kp RA(DOT)              &kp LS(NUMBER_1)  &kp RA(NUMBER_1)  &kp RA(Y)       &kp RA(R)         &kp RA(BACKSLASH)
+        &kp RA(H)         &kp RA(B)  &kp RA(J)  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp RA(U)         &kp LS(RA(N8))    &kp LS(RA(N7))  &kp RA(N7)        &kp LS(N5)
+&trans  &kp RA(NUMBER_6)  &kp RA(S)  &kp RA(L)  &kp EQUAL             &kp RA(LS(L))            &kp LS(NUMBER_3)  &kp RA(NUMBER_4)  &emdash_spaced  &kp LS(NUMBER_2)  &kp LS(RA(GRAVE))  &trans
+                                     &trans     &lt 4 SPACE           &trans                   &trans            &trans            &trans
             >;
         };
 
-        sym_ru {
-            // ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-
-            label = "SYM_RU";
-
-            // ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
-            //             ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓   ┏━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┳━━━━━━━━━━━┓
-            //             ┃   RESET   ┃ BT CLEAR  ┃  OUT TOG  ┃           ┃           ┃   ┃           ┃    F7     ┃    F8     ┃    F9     ┃    F12    ┃
-            //             ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫
-            //             ┃ BOOTLOAD  ┃ BT NEXT   ┃           ┃           ┃           ┃   ┃           ┃    F4     ┃    F5     ┃    F6     ┃    F11    ┃
-            // ┏━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┓
-            // ┃           ┃           ┃ BT PREV   ┃           ┃           ┃           ┃   ┃           ┃    F1     ┃    F2     ┃    F3     ┃    F10    ┃           ┃
-            // ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┫   ┣━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━╋━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-            //                                     ┃           ┃           ┃           ┃   ┃           ┃           ┃           ┃
-            //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
-
+        Sym2 {
+            label = "SYM2";
             bindings = <
-              &kp F10            &kp F9            &kp F4          &kp F3         &none                  &kp PLUS           &kp N7               &kp N8               &kp N9              &kp RA(NUMBER_3)
-              &hml LEFT_GUI F11  &hml LEFT_ALT F8  &hml LCTRL F5   &hml LSHFT F2  &kp EXCLAMATION        &kp N0             &hmr LSHFT NUMBER_1  &hmr LCTRL NUMBER_2  &hmr LALT NUMBER_3  &hmr LEFT_GUI PERCENT
-&kp LEFT_GUI  &kp F12            &kp F7            &kp F6          &kp F1         &kp RA(NUMBER_4)       &kp RA(SEMICOLON)  &kp NUMBER_4         &kp N5               &lt 10 NUMBER_6     &kp RA(LS(GRAVE))      &kp EQUAL
-                                                   &kp RA(PERIOD)  &kp RA(COMMA)  &layer_dashtap 11 0    &trans             &trans               &trans
+              &kp F10            &kp F9        &kp F4         &kp F3         &gr_minus        &gr_sqp            &kp N7               &kp N8               &kp N9              &kp RA(NUMBER_3)
+              &hml LEFT_GUI F11  &hml LALT F8  &hml LCTRL F5  &hml LSHFT F2  &kp RA(LS(C))    &kp N0             &hmr RSHFT NUMBER_1  &hmr LCTRL NUMBER_2  &hmr LALT NUMBER_3  &hmr LEFT_GUI PERCENT
+&kp LEFT_GUI  &kp F12            &kp F7        &kp F6         &kp F1         &gr_slash        &kp RA(SEMICOLON)  &kp NUMBER_4         &kp N5               &kp NUMBER_6        &kp LS(RA(N5))         &kp LC(EQUAL)
+                                               &trans         &trans         &trans           &trans             &trans               &trans
             >;
         };
 
@@ -1914,19 +1868,10 @@
 
         unicode {
             bindings = <
-        &kp LALT   &kp RA(E)  &kp RA(F)  &kp RA(X)  &kp RA(I)               &kp RA(D)  &kp RA(A)  &kp RA(Y)          &kp RA(R)      &kp RA(V)
-        &kp RA(H)  &kp RA(B)  &kp RA(J)  &kp LSHFT  &kp RS(RA(NUMBER_6))    &kp RA(U)  &kp LSHFT  &kp RA(LS(MINUS))  &kp RA(C)      &kp RA(N5)
-&trans  &kp LGUI   &kp RA(S)  &kp RA(O)  &kp RA(Z)  &kp RA(MINUS)           &kp ENTER  &kp BSPC   &kp DEL            &kp RA(SLASH)  &kp RA(LS(NUMBER_3))  &trans
-                              &trans     &trans     &trans                  &trans     &trans     &trans
-            >;
-        };
-
-        Sym1 {
-            bindings = <
-        &kp BACKSLASH     &kp RA(E)  &kp RA(F)  &kp RA(COMMA)         &kp RA(DOT)              &kp LS(NUMBER_1)  &kp RA(NUMBER_1)  &kp RA(Y)       &kp RA(R)         &kp RA(BACKSLASH)
-        &kp RA(H)         &kp RA(B)  &kp RA(J)  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp RA(U)         &kp LS(RA(N8))    &kp LS(RA(N7))  &kp RA(N7)        &kp LS(N5)
-&trans  &kp RA(NUMBER_6)  &kp RA(S)  &kp RA(L)  &kp EQUAL             &kp RA(LS(L))            &kp LS(NUMBER_3)  &kp RA(NUMBER_4)  &emdash_spaced  &kp LS(NUMBER_2)  &kp LS(RA(GRAVE))  &trans
-                                     &trans     &lt 3 SPACE           &trans                   &trans            &trans            &trans
+        &kp LALT       &kp RA(N8)  &kp RA(G)  &kp RA(X)  &kp RA(I)               &kp RA(D)      &kp RA(A)  &kp RA(N)              &kp RA(M)          &kp RA(V)
+        &kp RA(LS(M))  &kp RA(B)   &kp RA(C)  &kp LSHFT  &kp RS(RA(NUMBER_6))    &kp RA(MINUS)  &kp LSHFT  &kp RA(LS(SEMICOLON))  &kp RA(LS(MINUS))  &kp RA(N5)
+&trans  &kp LGUI       &kp RA(Q)   &kp RA(O)  &kp RA(Z)  &kp RA(LS(NUMBER_3))    &kp ENTER      &kp BSPC   &kp DEL                &kp RA(SLASH)      &kp RA(LS(EQUAL))  &trans
+                                   &trans     &trans     &trans                  &trans         &trans     &trans
             >;
         };
     };
