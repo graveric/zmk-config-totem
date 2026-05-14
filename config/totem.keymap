@@ -1684,7 +1684,7 @@
                     &kp J  &kp Y      &kp A         &kp U                    &gr_minus      &kp Q    &kp G                     &kp N         &kp F  &kp K
                     &kp H  &kp I      &hml LCTRL O  &hml LSHFT E             &gr_dot_en     &kp P    &hmr RSHFT D              &hmr LCTRL R  &kp S  &kp M
 &lt 8 C_PLAY_PAUSE  &kp X  &gr_under  &gr_quote     &gr_comma_en             &gr_slash      &kp B    &kp C                     &kp L         &kp W  &kp V  &kp Z
-                                      &lt 7 TAB     &arcane_left_en LSHFT 0  &lt 2 SPACE    &lt 3 T  &arcane_right_en RSHFT 0  &lt 11 ESC
+                                      &lt 7 TAB     &arcane_left_en LSHFT 0  &lt 2 SPACE    &lt 3 T  &arcane_right_en RSHFT 0  &lt 7 ESC
             >;
         };
 
@@ -1723,10 +1723,10 @@
 
         Sym1 {
             bindings = <
-        &kp BACKSLASH     &kp RA(E)  &kp RA(F)  &kp RA(COMMA)         &kp RA(DOT)              &kp LS(NUMBER_1)  &kp RA(NUMBER_1)  &kp RA(Y)       &kp RA(R)         &kp RA(BACKSLASH)
-        &kp RA(H)         &kp RA(B)  &kp RA(J)  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp RA(U)         &kp LS(RA(N8))    &kp LS(RA(N7))  &kp RA(N7)        &kp LS(N5)
-&trans  &kp RA(NUMBER_6)  &kp RA(S)  &kp RA(L)  &kp EQUAL             &kp RA(LS(L))            &kp LS(NUMBER_3)  &kp RA(NUMBER_4)  &emdash_spaced  &kp LS(NUMBER_2)  &kp LS(RA(GRAVE))  &trans
-                                     &trans     &trans                &lt 4 SPACE              &trans            &trans            &trans
+        &kp BACKSLASH     &kp RA(E)  &kp RA(F)   &kp RA(COMMA)         &kp RA(DOT)              &kp LS(NUMBER_1)  &kp RA(NUMBER_1)  &kp RA(Y)       &kp RA(R)         &kp RA(BACKSLASH)
+        &kp RA(H)         &kp RA(B)  &kp RA(J)   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp RA(U)         &kp LS(RA(N8))    &kp LS(RA(N7))  &kp RA(N7)        &kp LS(N5)
+&trans  &kp RA(NUMBER_6)  &kp RA(S)  &kp RA(L)   &kp EQUAL             &kp RA(LS(L))            &kp LS(NUMBER_3)  &kp RA(NUMBER_4)  &emdash_spaced  &kp LS(NUMBER_2)  &kp LS(RA(GRAVE))  &trans
+                                     &lt 11 TAB  &trans                &lt 4 SPACE              &trans            &trans            &trans
             >;
         };
 
