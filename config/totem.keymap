@@ -438,7 +438,7 @@
             akt_st {
                 trigger-keys = <C>;
                 max-prior-idle-ms = <1000>;
-                bindings = <&kp T>;
+                bindings = <&kp N>;
             };
 
             akt_dn {
