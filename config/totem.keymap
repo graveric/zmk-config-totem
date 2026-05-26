@@ -435,10 +435,10 @@
                 bindings = <&kp B>;
             };
 
-            akt_stv {
+            akt_st {
                 trigger-keys = <C>;
                 max-prior-idle-ms = <1000>;
-                bindings = <&kp RBKT>;
+                bindings = <&kp T>;
             };
 
             akt_dn {
@@ -831,10 +831,10 @@
                 bindings = <&kp E>;
             };
 
-            akt_stv {
+            akt_st {
                 trigger-keys = <C>;
                 max-prior-idle-ms = <1000>;
-                bindings = <&kp RBKT>;
+                bindings = <&kp T>;
             };
 
             akt_dd {
