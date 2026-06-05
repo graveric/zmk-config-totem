@@ -1161,21 +1161,9 @@
             key-positions = <24 13>;
         };
 
-        ShiftEnter {
-            bindings = <&kp LS(ENTER)>;
-            key-positions = <26 27>;
-            layers = <2 11>;
-        };
-
         CtrlEnter {
             bindings = <&kp LC(ENTER)>;
-            key-positions = <26 27 28>;
-            layers = <2 11>;
-        };
-
-        CtrlBksp {
-            bindings = <&kp LC(BACKSPACE)>;
-            key-positions = <27 28>;
+            key-positions = <26 27>;
             layers = <2 11>;
         };
 
@@ -1714,9 +1702,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp LS(DELETE)   &kp LS(HOME)  &kp LS(UP)      &kp LS(END)    &kp LC(LS(HOME))    &kp LC(HOME)  &kp HOME            &kp UP_ARROW    &kp END          &kp PAGE_UP
-            &lt 5 LS(LC(K))  &kp LS(LEFT)  &kp LS(DOWN)    &kp LS(RIGHT)  &kp LS(LC(END))     &kp LC(END)   &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT_ARROW  &lt 5 PG_DN
-&kp C_PREV  &mo 8            &cut_string   &new_line_down  &kp ESC        &kp DEL             &kp ENTER     &kp BACKSPACE       &kp DELETE      &kp INS          &kp PRINTSCREEN  &kp C_NEXT
+            &kp LS(DELETE)   &kp LS(HOME)  &kp LS(UP)      &kp LS(END)    &kp LC(LS(HOME))    &kp LC(HOME)  &kp HOME            &kp UP_ARROW       &kp END          &kp PAGE_UP
+            &lt 5 LS(LC(K))  &kp LS(LEFT)  &kp LS(DOWN)    &kp LS(RIGHT)  &kp LS(LC(END))     &kp LC(END)   &kp LEFT_ARROW      &kp DOWN_ARROW     &kp RIGHT_ARROW  &lt 5 PG_DN
+&kp C_PREV  &mo 8            &cut_string   &new_line_down  &kp DEL        &kp LS(ENTER)       &kp ENTER     &kp BACKSPACE       &kp LC(BACKSPACE)  &kp INS          &kp PRINTSCREEN  &kp C_NEXT
                                            &trans          &trans         &trans              &mo 4         &layer_sft 6 RSHFT  &kp LCTRL
             >;
         };
