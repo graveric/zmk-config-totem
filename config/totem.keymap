@@ -1669,19 +1669,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                    &kp J  &kp Y      &kp A         &kp U                    &gr_minus      &kp Q    &kp G                     &kp N         &kp F  &kp K
-                    &kp H  &kp I      &hml LCTRL O  &hml LSHFT E             &gr_dot_en     &kp P    &hmr RSHFT D              &hmr LCTRL R  &kp S  &kp M
-&lt 8 C_PLAY_PAUSE  &kp X  &gr_under  &gr_quote     &gr_comma_en             &gr_slash      &kp B    &kp C                     &kp L         &kp W  &kp V  &kp Z
-                                      &lt 7 TAB     &arcane_left_en LSHFT 0  &lt 2 SPACE    &lt 3 T  &arcane_right_en RSHFT 0  &lt 7 ESC
+                    &kp J  &kp Y      &kp A         &kp U         &gr_minus      &kp Q    &kp G         &kp N         &kp F  &kp K
+                    &kp H  &kp I      &hml LCTRL O  &hml LSHFT E  &gr_dot_en     &kp P    &hmr RSHFT D  &hmr LCTRL R  &kp S  &kp M
+&lt 8 C_PLAY_PAUSE  &kp X  &gr_under  &gr_quote     &gr_comma_en  &gr_slash      &kp B    &kp C         &kp L         &kp W  &kp V  &kp Z
+                                      &lt 7 TAB     &kp LSHFT     &lt 2 SPACE    &lt 3 T  &kp RSHFT     &lt 7 ESC
             >;
         };
 
         ru {
             bindings = <
-           &kp A  &kp E  &kp F         &kp DOT                  &gr_minus     &kp I      &kp V                     &kp Y         &kp R  &kp P
-           &kp Z  &kp B  &hml LCTRL J  &hml LSHFT T             &gr_dot_ru    &kp U      &hmr RSHFT N              &hmr LCTRL H  &kp D  &kp X
-&lt 8 SQT  &kp Q  &kp S  &kp M         &gr_comma_ru             &kp GRAVE     &kp COMMA  &kp L                     &kp K         &kp G  &kp SEMICOLON  &kp W
-                         &trans        &arcane_left_ru LSHFT 0  &trans        &lt 3 C    &arcane_right_ru RSHFT 0  &trans
+           &kp A  &kp E  &kp F         &kp DOT       &gr_minus     &kp I      &kp V         &kp Y         &kp R  &kp P
+           &kp Z  &kp B  &hml LCTRL J  &hml LSHFT T  &gr_dot_ru    &kp U      &hmr RSHFT N  &hmr LCTRL H  &kp D  &kp X
+&lt 8 SQT  &kp Q  &kp S  &kp M         &gr_comma_ru  &kp GRAVE     &kp COMMA  &kp L         &kp K         &kp G  &kp SEMICOLON  &kp W
+                         &trans        &kp LSHFT     &trans        &lt 3 C    &kp RSHFT     &trans
             >;
         };
 
