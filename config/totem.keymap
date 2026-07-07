@@ -42,11 +42,9 @@
         bindings = \
             <BINDINGS>; \
     };
-
 #define MACRO_NO_PARAM(NAME, BINDINGS)  MACRO(NAME, "zmk,behavior-macro"          , 0, BINDINGS)
 #define MACRO_ONE_PARAM(NAME, BINDINGS) MACRO(NAME, "zmk,behavior-macro-one-param", 1, BINDINGS)
 #define MACRO_TWO_PARAM(NAME, BINDINGS) MACRO(NAME, "zmk,behavior-macro-two-param", 2, BINDINGS)
-
 #define MODMORPH(NAME, NORMAL, MORPHED, MODS, KEEP_MODS) \
     NAME: NAME { \
         compatible = "zmk,behavior-mod-morph"; \
@@ -56,10 +54,8 @@
         keep-mods = <(KEEP_MODS)>; \
     };
 
-
 / {
     behaviors {
-
         MACRO_TWO_PARAM(
             m_hold_mod_press_key,
             &macro_press
@@ -1215,7 +1211,7 @@
 
         CtrlEnter {
             bindings = <&kp LC(ENTER)>;
-            key-positions = <26 27>;
+            key-positions = <27 28>;
             layers = <2 11>;
         };
 
@@ -1273,6 +1269,12 @@
             bindings = <&kp LGUI>;
             key-positions = <36 35>;
             layers = <0 1>;
+        };
+
+        ShiftEnter {
+            bindings = <&kp LC(ENTER)>;
+            key-positions = <27 26>;
+            layers = <2 11>;
         };
     };
 
@@ -1727,10 +1729,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-                    &kp J  &kp Y      &kp A         &kp U         &gr_minus      &kp Q    &kp G         &kp N         &kp F  &kp K
-                    &kp H  &kp I      &hml LCTRL O  &hml LSHFT E  &gr_dot_en     &kp P    &hmr RSHFT D  &hmr LCTRL R  &kp S  &kp M
-&lt 8 C_PLAY_PAUSE  &kp X  &gr_under  &gr_quote     &gr_comma_en  &gr_slash      &kp B    &kp C         &kp L         &kp W  &kp V  &kp Z
-                                      &lt 7 TAB     &kp LSHFT     &lt 2 SPACE    &lt 3 T  &kp RSHFT     &lt 4 ESC
+                    &kp J  &kp Y      &kp A         &kp U         &gr_minus     &kp Q      &kp G         &kp N         &kp F  &kp K
+                    &kp H  &kp I      &hml LCTRL O  &hml LSHFT E  &gr_dot_en    &kp P      &hmr RSHFT D  &hmr LCTRL R  &kp S  &kp M
+&lt 8 C_PLAY_PAUSE  &kp X  &gr_under  &gr_quote     &gr_comma_en  &gr_slash     &kp B      &kp C         &kp L         &kp W  &kp V  &kp Z
+                                      &kp LSHFT     &lt 2 SPACE   &lt 7 TAB     &lt 4 ESC  &lt 3 T       &kp RSHFT
             >;
         };
 
@@ -1739,7 +1741,7 @@
            &kp A  &kp E  &kp F         &kp DOT       &gr_minus     &kp I      &kp V         &kp Y         &kp R  &kp P
            &kp Z  &kp B  &hml LCTRL J  &hml LSHFT T  &gr_dot_ru    &kp U      &hmr RSHFT N  &hmr LCTRL H  &kp D  &kp X
 &lt 8 SQT  &kp Q  &kp S  &kp M         &gr_comma_ru  &kp GRAVE     &kp COMMA  &kp L         &kp K         &kp G  &kp SEMICOLON  &kp W
-                         &trans        &kp LSHFT     &trans        &lt 3 C    &kp RSHFT     &trans
+                         &trans        &trans        &trans        &trans     &lt 3 C       &trans
             >;
         };
 
@@ -1760,19 +1762,19 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &swapper_win   &kp LS(HOME)  &kp LS(UP)      &kp LS(END)    &kp LC(LS(HOME))    &kp LC(HOME)  &kp HOME            &kp UP_ARROW       &kp END          &kp PAGE_UP
-            &lt 5 LS(LC(K))  &kp LS(LEFT)  &kp LS(DOWN)    &kp LS(RIGHT)  &kp LS(LC(END))     &kp LC(END)   &kp LEFT_ARROW      &kp DOWN_ARROW     &kp RIGHT_ARROW  &lt 5 PG_DN
-&kp C_PREV  &mo 8            &cut_string   &new_line_down  &kp DEL        &tabber       &kp ENTER     &kp BACKSPACE       &kp LC(BACKSPACE)  &kp INS          &kp PRINTSCREEN  &kp C_NEXT
-                                           &trans          &trans         &trans              &mo 4         &layer_sft 6 RSHFT  &kp LCTRL
+            &swapper_win     &kp LS(HOME)  &kp LS(UP)      &kp LS(END)    &kp LC(LS(HOME))    &kp LC(HOME)  &kp HOME        &kp UP_ARROW       &kp END          &kp PAGE_UP
+            &lt 5 LS(LC(K))  &kp LS(LEFT)  &kp LS(DOWN)    &kp LS(RIGHT)  &kp LS(LC(END))     &kp LC(END)   &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW  &lt 5 PG_DN
+&kp C_PREV  &mo 6            &cut_string   &new_line_down  &kp DEL        &tabber             &kp ENTER     &kp BACKSPACE   &kp LC(BACKSPACE)  &kp INS          &lt 6 PRINTSCREEN  &kp C_NEXT
+                                           &trans          &trans         &trans              &kp LSHFT     &mo 11          &kp LCTRL
             >;
         };
 
         Sym1 {
             bindings = <
-        &kp BACKSLASH     &kp RA(E)  &kp RA(F)   &kp RA(COMMA)         &kp RA(DOT)              &kp LS(NUMBER_1)  &kp RA(NUMBER_1)  &kp RA(Y)       &kp RA(R)         &kp RA(BACKSLASH)
-        &kp RA(H)         &kp RA(B)  &kp RA(J)   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp RA(U)         &kp LS(RA(N8))    &kp LS(RA(N7))  &kp RA(N7)        &kp LS(N5)
-&trans  &kp RA(NUMBER_6)  &kp RA(S)  &kp RA(L)   &kp EQUAL             &kp RA(LS(L))            &kp LS(NUMBER_3)  &kp RA(NUMBER_4)  &emdash_spaced  &kp LS(NUMBER_2)  &kp LS(RA(GRAVE))  &trans
-                                     &lt 11 TAB  &trans                &lt 4 SPACE              &trans            &trans            &trans
+        &kp BACKSLASH     &kp RA(E)  &kp RA(F)  &kp RA(COMMA)         &kp RA(DOT)              &kp LS(NUMBER_1)  &kp RA(NUMBER_1)  &kp RA(Y)       &kp RA(R)         &kp RA(BACKSLASH)
+        &kp RA(H)         &kp RA(B)  &kp RA(J)  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS    &kp RA(U)         &kp LS(RA(N8))    &kp LS(RA(N7))  &kp RA(N7)        &kp LS(N5)
+&trans  &kp RA(NUMBER_6)  &kp RA(S)  &kp RA(L)  &kp EQUAL             &kp RA(LS(L))            &kp LS(NUMBER_3)  &kp RA(NUMBER_4)  &emdash_spaced  &kp LS(NUMBER_2)  &kp LS(RA(GRAVE))  &trans
+                                     &kp LSHFT  &mo 11                &kp LCTRL                &trans            &trans            &trans
             >;
         };
 
@@ -1829,8 +1831,8 @@
             bindings = <
         &kp LG(LA(Q))  &kp LA(LG(O))  &kp LS(LG(K))  &kp LA(LG(R))  &kp LA(LG(T))    &kp LG(F)             &kp LS(LA(F8))  &kp LS(LA(F9))  &kp LS(LA(F10))  &kp LS(LA(F11))
         &kp LA(LG(F))  &kp LS(LG(H))  &kp LS(LG(J))  &kp LS(LG(L))  &kp LA(LG(Y))    &kp LS(LG(UP_ARROW))  &kp LC(F1)      &kp LC(F2)      &kp LC(F3)       &kp LC(F4)
-&trans  &kp LG(M)      &kp LC(LG(K))  &kp LC(LG(H))  &kp LG(LC(L))  &kp LC(LG(J))    &kp LS(LG(DOWN))      &kp LG(M)       &kp LA(F3)      &kp LG(LC(A))    &kp LG(LC(D))    &trans
-                                      &kp LG(ENTER)  &kp LG(K)      &kp LG(J)        &trans                &trans          &trans
+&trans  &trans         &kp LC(LG(K))  &kp LC(LG(H))  &kp LG(LC(L))  &kp LC(LG(J))    &kp LS(LG(DOWN))      &kp LG(M)       &kp LA(F3)      &kp LG(LC(A))    &trans           &trans
+                                      &kp LG(ENTER)  &trans         &kp LG(J)        &trans                &trans          &kp LG(ENTER)
             >;
         };
 
@@ -1838,8 +1840,8 @@
             bindings = <
         &kp LC(W)      &kp LC(Q)  &kp LC(LS(I))  &kp LS(LC(R))  &kp LC(T)    &kp LC(MINUS)  &kp LC(D)  &kp LC(N)          &kp LS(LC(M))  &kp LC(MINUS)
         &kp LS(LC(K))  &kp LC(L)  &kp LC(S)      &kp LC(A)      &kp LC(F)    &kp LC(EQUAL)  &kp LC(P)  &kp LS(LA(LC(E)))  &kp LC(O)      &kp LC(PLUS)
-&trans  &kp LC(Q)      &kp LA(Z)  &kp LC(G)      &kp LC(R)      &kp LC(H)    &kp LC(B)      &kp LC(I)  &kp LC(U)          &kp LS(LC(X))  &kp LSHFT      &trans
-                                  &trans         &trans         &trans       &kp LS(LC(Z))  &kp LC(Z)  &kp LC(W)
+&trans  &kp LC(Q)      &kp LA(Z)  &kp LC(G)      &kp LC(R)      &kp LC(H)    &kp LC(B)      &kp LC(I)  &kp LC(U)          &kp LS(LC(X))  &kp LS(DEL)    &kp LSHFT
+                                  &trans         &trans         &trans       &kp LALT       &kp LCTRL  &kp LSHFT
             >;
         };
 
