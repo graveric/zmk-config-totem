@@ -30,8 +30,36 @@
     tapping-term-ms = <170>;
 };
 
+#define MODMORPH(NAME, NORMAL, MORPHED, MODS, KEEP_MODS) \
+    NAME: NAME { \
+        compatible = "zmk,behavior-mod-morph"; \
+        #binding-cells = <0>; \
+        bindings = <NORMAL>, <MORPHED>; \
+        mods = <(MODS)>; \
+        keep-mods = <(KEEP_MODS)>; \
+    };
+
+
 / {
     behaviors {
+
+
+        MODMORPH(
+            tabber,
+            &m_hold_mod_press_key LCTRL TAB,
+            &kp TAB,
+            MOD_LCTL,
+            MOD_LCTL
+        )
+
+        MODMORPH(
+            swapper_win,
+            &m_hold_mod_press_key LALT TAB,
+            &kp TAB,
+            MOD_LALT,
+            MOD_LALT
+        )
+
         hml: hrm_left {
             compatible = "zmk,behavior-hold-tap";
             bindings = <&kp>, <&kp>;
