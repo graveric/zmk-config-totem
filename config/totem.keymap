@@ -1,6 +1,3 @@
-//
-//                                                        ▀▀▀▀▀     ▀▀▀▀▀          ▀▀█▀▀
-//                                                        ▄▀▀▀▄  ▄  ▄▀▀▀▄  ▄  ▄▀▀▀▄  █  ▄▀▀▀▄
 //                                                        █   █  █  █   █  █  █   █  █  █   █
 //                                                         ▀▀▀   █   ▀▀▀   █   ▀▀▀   ▀   ▀▀▀
 //                                                               █      ▄▄▄█▄▄▄    █   █  
@@ -38,7 +35,7 @@
             #binding-cells = <0>;
             bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
 
-            ignored-key-positions = <37>;
+            ignored-key-positions = <17>,<7>,<37>;
         };
 
         tabber: tabber {
@@ -47,7 +44,7 @@
             #binding-cells = <0>;
             bindings = <&kt LCTL>, <&kp TAB>, <&kt LCTL>;
 
-            ignored-key-positions = <37>;
+            ignored-key-positions = <17>,<7>,<37>;
         };
         hml: hrm_left {
             compatible = "zmk,behavior-hold-tap";
@@ -925,7 +922,7 @@
         gr_dot_en: gr_dot_en {
             compatible = "zmk,behavior-mod-morph";
             label = "GR_DOT_EN";
-            bindings = <&kp RA(LS(C))>, <&gm_dot_space_shift>;
+            bindings = <&kp RA(LS(C))>, <&kp RA(GRAVE)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -988,7 +985,7 @@
         gr_under: gr_under {
             compatible = "zmk,behavior-mod-morph";
             label = "GR_UNDER";
-            bindings = <&kp UNDERSCORE>, <&kp RA(GRAVE)>;
+            bindings = <&kp UNDERSCORE>, <&arr_right>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -1026,6 +1023,15 @@
             require-prior-idle-ms = <150>;
             flavor = "balanced";
         };
+        
+        eq_comma: eq_comma {
+            compatible = "zmk,behavior-mod-morph";
+            label = "EQ_COMMA";
+            bindings = <&kp EQUAL>, <&kp RA(LS(NUMBER_5))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };        
     };
 
     combos {
@@ -1034,13 +1040,13 @@
         kha {
             bindings = <&kp LBKT>;
             key-positions = <6 7>;
-            layers = <0>;
+            layers = <0 4 3>;
         };
 
         hrdsgn {
             bindings = <&kp RBKT>;
             key-positions = <7 8>;
-            layers = <0>;
+            layers = <0 4 3>;
         };
 
         TO_RU {
@@ -1086,13 +1092,13 @@
         en_lbr {
             bindings = <&kp LEFT_BRACE>;
             key-positions = <16 6>;
-            layers = <0>;
+            layers = <0 4 3>;
         };
 
         en_rbr {
             bindings = <&kp RIGHT_BRACE>;
             key-positions = <17 7>;
-            layers = <0>;
+            layers = <0 4 3>;
         };
 
         ru_rbrc {
@@ -1116,6 +1122,7 @@
         ru_sl {
             bindings = <&gr_slash>;
             key-positions = <24 25>;
+            layers = <1>;
         };
 
         c_s {
@@ -1139,6 +1146,7 @@
         c_v {
             bindings = <&kp LC(V)>;
             key-positions = <12 2>;
+            layers = <0 1>;
         };
 
         kh {
@@ -1274,7 +1282,13 @@
             bindings = <&kp LS(LC(LA(V)))>;
             key-positions = <2 12>;
             layers = <7>;
-        };        
+        };
+        
+        m23 {
+            bindings = <&p23>;
+            key-positions = <17 18>;
+            layers = <3>;
+        };                
     };
 
     macros {
@@ -1724,7 +1738,14 @@
             #binding-cells = <0>;
             bindings = <&kp RA(L) &kp RA(LS(BACKSLASH))>;
             label = "TAG_CLOSE";
-        };        
+        }; 
+
+        p23: p23 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PRCNT &kp N2 &kp N3>;
+            label = "P23";
+        };
     };
 
     keymap {
@@ -1752,7 +1773,7 @@
                     &kp J  &kp Y      &kp A         &kp U         &gr_minus     &kp Q      &kp G         &kp N         &kp F  &kp K
                     &kp H  &kp I      &hml LCTRL O  &hml LSHFT E  &gr_dot_en    &kp P      &hmr RSHFT D  &hmr LCTRL R  &kp S  &kp M
 &lt 8 C_PLAY_PAUSE  &kp X  &gr_under  &gr_quote     &gr_comma_en  &gr_slash     &kp B      &kp C         &kp L         &kp W  &kp V  &kp Z
-                                      &kp LSHFT     &lt 2 SPACE   &lt 7 TAB     &lt 4 ESC  &lt 3 T       &kp RSHFT
+                                      &kp LSHFT     &lt 2 SPACE   &lt 7 TAB     &lt 3 ESC  &lt 4 T       &kp RSHFT
             >;
         };
 
@@ -1761,7 +1782,7 @@
            &kp A  &kp E  &kp F         &kp DOT       &gr_minus     &kp I      &kp V         &kp Y         &kp R  &kp P
            &kp Z  &kp B  &hml LCTRL J  &hml LSHFT T  &gr_dot_ru    &kp U      &hmr RSHFT N  &hmr LCTRL H  &kp D  &kp X
 &lt 8 SQT  &kp Q  &kp S  &kp M         &gr_comma_ru  &kp GRAVE     &kp COMMA  &kp L         &kp K         &kp G  &kp SEMICOLON  &kp W
-                         &trans        &trans        &trans        &trans     &lt 3 C       &trans
+                         &trans        &trans        &trans        &trans     &lt 4 C       &trans
             >;
         };
 
@@ -1789,22 +1810,22 @@
             >;
         };
 
+        Num {
+            label = "NUM";
+            bindings = <
+              &kp F9            &kp F8            &kp F4         &kp F3            &gr_minus        &kp RA(X)          &kp F5               &kp F6               &kp F7                &kp F10
+              &hml LEFT_GUI N8  &hml LALT N7      &hml LCTRL N6  &hml LSHFT N0     &kp RA(LS(C))                            &eq_comma          &hmr RSHFT NUMBER_1  &hmr LCTRL NUMBER_2  &hmr LALT NUMBER_3    &hmr LEFT_GUI NUMBER_4
+&kp LEFT_GUI  &kp F11           &kp RA(NUMBER_3)  &kp N9         &kp F12           &gr_slash                                &kp RA(SEMICOLON)  &kp F2               &kp N5               &kp RS(RA(NUMBER_3))  &kp F1        &kp LC(EQUAL)
+                                               &kp RA(NUMBER_5)  &lt 4 SPACE      &kp RA(LS(N6))          &trans             &trans               &trans
+            >;
+        };
+
         Sym1 {
             bindings = <
         &kp BACKSLASH     &arr_left   &kp LPAR   &kp RPAR       &gr_minus               &kp LS(NUMBER_1)  &kp RA(NUMBER_1)  &kp RA(MINUS)   &kp RA(LS(MINUS))  &kp RA(BACKSLASH)
         &tag_close        &kp RA(L)   &kp EQUAL  &kp RA(LS(L))  &gr_dot_en     &kp LS(NUMBER_2)  &kp LS(RA(N8))    &kp LS(RA(N7))  &kp RA(N7)         &kp LS(N5)
 &trans  &kp RA(NUMBER_6)  &arr_right  &kp PLUS   &kp STAR       &gr_slash            &kp LS(NUMBER_3)  &kp RA(NUMBER_4)  &kp RA(COMMA)   &kp RA(DOT)        &kp LS(RA(GRAVE))  &trans
                                      &kp LSHFT  &mo 11                &kp LCTRL                &trans            &trans            &trans
-            >;
-        };
-
-        Sym2 {
-            label = "SYM2";
-            bindings = <
-              &kp F9            &kp F8            &kp F4         &kp F3            &gr_minus        &kp RA(X)          &kp F5               &kp F6               &kp F7                &kp F10
-              &hml LEFT_GUI N8  &hml LALT N7      &hml LCTRL N6  &hml LSHFT N0     &kp RA(LS(C))                            &kp EQUAL          &hmr RSHFT NUMBER_1  &hmr LCTRL NUMBER_2  &hmr LALT NUMBER_3    &hmr LEFT_GUI NUMBER_4
-&kp LEFT_GUI  &kp F11           &kp RA(NUMBER_3)  &kp N9         &kp F12           &gr_slash                                &kp RA(SEMICOLON)  &kp F2               &kp N5               &kp RS(RA(NUMBER_3))  &kp F1        &kp LC(EQUAL)
-                                               &kp RA(NUMBER_5)  &kp SPACE      &kp RA(LS(N6))          &trans             &trans               &trans
             >;
         };
 
@@ -1894,9 +1915,9 @@
 
         unicode {
             bindings = <
-        &kp RA(Q)  &kp RA(E)  &kp RA(F)  &kp RA(X)  &kp RA(I)                               &kp RA(D)  &kp RA(A)  &kp RA(Y)         &kp RA(R)         &kp RA(V)
-         &kp RA(H)  &kp RA(B)  &kp RA(J)  &kp LSHFT  &kp RS(RA(NUMBER_6))                    &kp RA(U)  &kp LSHFT  &kp RA(C)         &kp RA(NUMBER_5)  &kp RA(N)
-&trans  &kp RA(M)  &kp RA(S)  &kp RA(O)  &kp RA(Z)  &kp RA(LS(NUMBER_3))                    &kp RA(G)  &kp BSPC   &kp RA(NUMBER_8)  &kp RA(SLASH)     &kp RA(EQUAL)  &trans
+        &kp RA(Q)  &kp RA(E)  &kp RA(F)  &kp RA(P)  &kp RA(I)                               &kp RA(D)  &kp RA(A)  &kp RA(Y)         &kp RA(R)         &kp RA(V)
+         &kp RA(H)  &kp RA(B)  &kp RA(J)  &kp LSHFT  &kp RS(RA(NUMBER_6))                    &kp RA(U)  &kp LSHFT  &kp RA(C)         &kp RA(W)  &kp RA(K)
+&trans  &kp RA(SQT)  &kp RA(S)  &kp RA(O)  &kp RA(Z)  &kp RA(LS(NUMBER_3))                    &kp RA(G)  &kp BSPC   &kp RA(NUMBER_8)  &kp RA(SLASH)     &kp RA(EQUAL)  &trans
                                    &trans     &trans     &trans                  &trans         &trans     &trans
             >;
         };
