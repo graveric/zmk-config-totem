@@ -1070,13 +1070,13 @@
 
         TO_RU {
             bindings = <&KB_RU>;
-            key-positions = <27 28>;
+            key-positions = <28 29>;
             layers = <0>;
         };
 
         TO_EN {
             bindings = <&KB_EN>;
-            key-positions = <27 28>;
+            key-positions = <28 29>;
             layers = <1>;
         };
 
@@ -1100,13 +1100,13 @@
 
         shtab {
             bindings = <&kp LS(TAB)>;
-            key-positions = <31 30>;
+            key-positions = <32 33>;
             layers = <0 1>;
         };
 
         th_gui {
             bindings = <&sk LEFT_GUI>;
-            key-positions = <31 32>;
+            key-positions = <33 34>;
             layers = <0 1>;
         };
 
@@ -1142,7 +1142,7 @@
 
         ru_sl {
             bindings = <&gr_slash>;
-            key-positions = <23 24>;
+            key-positions = <24 25>;
             layers = <1>;
         };
 
@@ -1174,23 +1174,23 @@
 
         c_z {
             bindings = <&kp LC(Z)>;
-            key-positions = <23 22>;
+            key-positions = <23 24>;
         };
 
         cs_z {
             bindings = <&kp LS(LC(Z))>;
-            key-positions = <22 21>;
+            key-positions = <22 23>;
         };
 
         rth_ctrl {
             bindings = <&kp LCTRL>;
-            key-positions = <33 34>;
+            key-positions = <35 36>;
             layers = <0 1 4>;
         };
 
         rth_alt {
             bindings = <&kp LALT>;
-            key-positions = <35 34>;
+            key-positions = <37 36>;
             layers = <0 1 4>;
         };
 
@@ -1208,18 +1208,18 @@
 
         ru_sch2 {
             bindings = <&kp O>;
-            key-positions = <26 27>;
+            key-positions = <27 28>;
             layers = <1>;
         };
 
         mrck2 {
             bindings = <&mkp RCLK>;
-            key-positions = <23 13>;
+            key-positions = <12 23>;
         };
 
         mmck {
             bindings = <&mkp MCLK>;
-            key-positions = <22 12>;
+            key-positions = <12 24>;
         };
 
         mlcck {
@@ -1229,18 +1229,18 @@
 
         CtrlEnter {
             bindings = <&kp LC(ENTER)>;
-            key-positions = <26 26 27 28>;
+            key-positions = <27 28 29>;
             layers = <4>;
         };
 
         Ralt1 {
             bindings = <&kp RALT>;
-            key-positions = <24 14>;
+            key-positions = <14 25>;
         };
 
         Ralt2 {
             bindings = <&kp RALT>;
-            key-positions = <25 15>;
+            key-positions = <15 26>;
         };
 
         not_equal {
@@ -1250,24 +1250,24 @@
 
         fadein_en {
             bindings = <&sl 9>;
-            key-positions = <25 26>;
+            key-positions = <26 27>;
             layers = <0>;
         };
 
         fadein_ru {
             bindings = <&sl 10>;
-            key-positions = <25 26>;
+            key-positions = <26 27>;
         };
 
         ShiftEnter {
             bindings = <&kp LC(ENTER)>;
-            key-positions = <26 27>;
+            key-positions = <27 28>;
             layers = <4>;
         };
 
         cpswrd {
             bindings = <&caps_word>;
-            key-positions = <32 33>;
+            key-positions = <35 34>;
         };
 
         paste_text {
@@ -1284,7 +1284,7 @@
 
         symtosym2 {
             bindings = <&sl 3>;
-            key-positions = <31 30>;
+            key-positions = <33 32>;
             layers = <2>;
         };
 
@@ -1296,7 +1296,7 @@
 
         ctrl-down {
             bindings = <&kp LC(DOWN)>;
-            key-positions = <17 27>;
+            key-positions = <17 28>;
             layers = <4>;
         };
 
@@ -1792,58 +1792,58 @@
         en_base {
             label = "BASE";
             bindings = <
-        &kp J  &kp Y      &kp A      &kp U         &gr_minus                             &kp Q  &kp G       &kp N  &kp F  &kp K
-        &kp H  &kp I      &kp O      &kp E         &gr_dot_en                            &kp P  &kp D       &kp R  &kp S  &kp M
-&trans  &kp X  &gr_under  &gr_quote  &gr_comma_en  &gr_slash                             &kp B  &kp C       &kp L  &kp W  &kp V    &trans
-                               &lt 7 TAB     &lt 4 SPACE  &sk LSHFT    &sl2_locky  &kp T  &sl3_locky
+              &kp J  &kp Y      &kp A      &kp U         &gr_minus     &kp Q       &kp G  &kp N       &kp F  &kp K
+              &kp H  &kp I      &kp O      &kp E         &gr_dot_en    &kp P       &kp D  &kp R       &kp S  &kp M
+&kp C_VOL_DN  &kp X  &gr_under  &gr_quote  &gr_comma_en  &gr_slash     &kp B       &kp C  &kp L       &kp W  &kp V  &kp C_VOLUME_UP
+                                &lt 7 TAB  &lt 4 SPACE   &sk LSHFT     &sl2_locky  &kp T  &sl3_locky
             >;
         };
 
         ru {
             bindings = <
-        &kp A  &kp E  &kp F  &kp DOT       &gr_minus                     &kp I      &kp V   &kp Y  &kp R  &kp P
-        &kp Z  &kp B  &kp J  &kp T         &gr_dot_ru                    &kp U      &kp N   &kp H  &kp D  &kp X
-&trans  &kp Q  &kp S  &kp M  &gr_comma_ru  &kp GRAVE                     &kp COMMA  &kp L   &kp K  &kp G  &kp SEMICOLON     &trans
-                       &trans        &trans      &trans    &trans  &kp C      &trans
+        &kp A  &kp E  &kp F   &kp DOT       &gr_minus     &kp I      &kp V  &kp Y   &kp R  &kp P
+        &kp Z  &kp B  &kp J   &kp T         &gr_dot_ru    &kp U      &kp N  &kp H   &kp D  &kp X
+&trans  &kp Q  &kp S  &kp M   &gr_comma_ru  &kp GRAVE     &kp COMMA  &kp L  &kp K   &kp G  &kp SEMICOLON  &trans
+                      &trans  &trans        &trans        &trans     &kp C  &trans
             >;
         };
 
         Sym {
             label = "Sym";
             bindings = <
-        &kp RA(LS(GRAVE))  &kp RA(L)         &kp EQUAL      &kp LS(RA(L))  &gr_minus                           &kp RA(LS(N7))  &kp LPAR             &kp RPAR             &kp RA(N7)          &kp RA(BSLH)
-        &hml LEFT_GUI N8   &hml LALT N7      &hml LCTRL N6  &hml LSHFT N0  &gr_dot_en                          &smc_comma      &hmr RSHFT NUMBER_1  &hmr LCTRL NUMBER_2  &hmr LALT NUMBER_3  &hmr LEFT_GUI NUMBER_4
-&trans  &kp RA(N6)         &kp LS(NUMBER_3)  &kp N9         &kp EXCL       &gr_slash                           &kp RA(MINUS)   &kp RA(N1)           &kp N5               &kp LS(NUMBER_2)    &kp PRCNT  &trans
-                                                      &kp RA(COMMA)  &lt 4 SPACE  &kp RA(DOT)    &tog 2  &sk LSHFT       &sl3_locky
+        &kp RA(LS(GRAVE))  &kp RA(L)         &kp EQUAL      &kp LS(RA(L))  &gr_minus      &kp RA(LS(N7))  &kp LPAR             &kp RPAR             &kp RA(N7)          &kp RA(BSLH)
+        &hml LEFT_GUI N8   &hml LALT N7      &hml LCTRL N6  &hml LSHFT N0  &gr_dot_en     &smc_comma      &hmr RSHFT NUMBER_1  &hmr LCTRL NUMBER_2  &hmr LALT NUMBER_3  &hmr LEFT_GUI NUMBER_4
+&trans  &kp RA(N6)         &kp LS(NUMBER_3)  &kp N9         &kp EXCL       &gr_slash      &kp RA(MINUS)   &kp RA(N1)           &kp N5               &kp LS(NUMBER_2)    &kp PRCNT               &trans
+                                             &kp RA(COMMA)  &lt 4 SPACE    &kp RA(DOT)    &tog 2          &sk LSHFT            &sl3_locky
             >;
         };
 
         Sym2 {
             bindings = <
-        &kp RA(Q)    &kp RA(E)  &kp RA(F)  &kp RA(P)       &kp RA(I)                                  &kp RA(X)         &kp RA(A)             &kp RA(Y)         &kp RA(R)  &kp RA(V)
-        &kp RA(H)    &kp RA(B)  &kp RA(J)  &kp RA(LS(N6))  &kp RA(SLASH)                              &kp RA(U)         &kp RA(NUMBER_5)      &kp RA(C)         &kp RA(W)  &kp RA(K)
-&trans  &kp RA(SQT)  &kp RA(S)  &kp RA(O)  &kp RA(Z)       &kp RA(LS(NUMBER_4))                       &kp LS(RA(SEMI))  &kp RA(LS(NUMBER_3))  &kp RA(NUMBER_3)  &kp RA(D)  &kp RA(EQUAL)    &trans
-                                     &trans          &trans                &sk LSHFT    &trans  &sk LSHFT         &tog 3
+                  &kp RA(Q)    &kp RA(E)  &kp RA(F)  &kp RA(P)       &kp RA(I)               &kp RA(X)         &kp RA(A)             &kp RA(Y)         &kp RA(R)  &kp RA(V)
+                  &kp RA(H)    &kp RA(B)  &kp RA(J)  &kp RA(LS(N6))  &kp RA(SLASH)           &kp RA(U)         &kp RA(NUMBER_5)      &kp RA(C)         &kp RA(W)  &kp RA(K)
+&kp C_PLAY_PAUSE  &kp RA(SQT)  &kp RA(S)  &kp RA(O)  &kp RA(Z)       &kp RA(LS(NUMBER_4))    &kp LS(RA(SEMI))  &kp RA(LS(NUMBER_3))  &kp RA(NUMBER_3)  &kp RA(D)  &kp RA(EQUAL)  &kp C_PP
+                                          &trans     &trans          &sk LSHFT               &trans            &sk LSHFT             &tog 3
             >;
         };
 
         nav_layer {
             label = "NAVI";
             bindings = <
-        &swapper      &kp LS(HOME)  &kp LS(UP)     &kp LS(END)    &tabber                     &kp DELETE     &kp HOME        &kp UP_ARROW    &kp END          &kp PAGE_UP
-        &hml LGUI F9  &hml LALT F7  &hml LCTRL F6  &hml LSHFT F5  &kp INS                     &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_DN
-&trans  &lt 6 F10     &kp F11       &kp F12        &kp F2         &swapper                    &kp ESC        &kp LC(HOME)    &kp ENTER       &kp LC(END)      &lt 6 PRINTSCREEN &trans
-                                             &trans         &trans    &trans    &tog 4  &sk LSHFT      &sk LEFT_GUI
+        &swapper      &kp LS(HOME)  &kp LS(UP)     &kp LS(END)    &tabber     &kp DELETE     &kp HOME        &kp UP_ARROW    &kp END          &kp PAGE_UP
+        &hml LGUI F9  &hml LALT F7  &hml LCTRL F6  &hml LSHFT F5  &kp INS     &kp BACKSPACE  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PG_DN
+&trans  &lt 6 F10     &kp F11       &kp F12        &kp F2         &swapper    &kp ESC        &kp LC(HOME)    &kp ENTER       &kp LC(END)      &lt 6 PRINTSCREEN  &trans
+                                    &trans         &trans         &trans      &tog 4         &sk LSHFT       &sk LEFT_GUI
             >;
         };
 
         adj {
             label = "adj";
             bindings = <
-        &bootloader   &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1      &bt BT_SEL 0                         &kp C_MUTE       &kp F3  &kp F4  &kp F9  &kp F10
-        &kp LEFT_GUI  &kp LALT      &kp LCTRL     &kp LSHFT         &kp C_VOLUME_DOWN                    &kp C_VOLUME_UP  &kp F2  &kp F5  &kp F8  &kp F11
-&trans  &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &kp C_PLAY_PAUSE  &kp C_PREV                           &kp C_NEXT       &kp F1  &kp F6  &kp F7  &kp F12   &trans
-                                            &trans            &trans             &trans    &trans  &trans           &trans
+        &bootloader   &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1      &bt BT_SEL 0         &kp C_MUTE       &kp F3  &kp F4  &kp F9  &kp F10
+        &kp LEFT_GUI  &kp LALT      &kp LCTRL     &kp LSHFT         &kp C_VOLUME_DOWN    &kp C_VOLUME_UP  &kp F2  &kp F5  &kp F8  &kp F11
+&trans  &bt BT_CLR    &out OUT_BLE  &out OUT_USB  &kp C_PLAY_PAUSE  &kp C_PREV           &kp C_NEXT       &kp F1  &kp F6  &kp F7  &kp F12  &trans
+                                    &trans        &trans            &trans               &trans           &trans  &trans
             >;
 
             display-name = "Adjust";
@@ -1852,55 +1852,55 @@
         khronkite {
             label = "khrnkt";
             bindings = <
-        &kp LG(LA(Q))  &kp LA(LG(O))  &kp LS(LG(K))  &kp LA(LG(R))  &kp LA(LG(T))                       &kp LG(F)             &kp LS(LA(F8))  &kp LS(LA(F9))  &kp LS(LA(F10))  &kp LS(LA(F11))
-        &kp LA(LG(F))  &kp LS(LG(H))  &kp LS(LG(J))  &kp LS(LG(L))  &kp LA(LG(Y))                       &kp LS(LG(UP_ARROW))  &kp LC(F1)      &kp LC(F2)      &kp LC(F3)       &kp LC(F4)
-&trans  &trans         &kp LC(LG(K))  &kp LC(LG(H))  &kp LG(LC(L))  &kp LC(LG(J))                       &kp LS(LG(DOWN))      &kp LG(M)       &kp LA(F3)      &kp LG(LC(A))    &trans   &trans
-                                               &kp LG(ENTER)  &trans         &kp LG(J)    &trans  &trans                &kp LG(ENTER)
+        &kp LG(LA(Q))  &kp LA(LG(O))  &kp LS(LG(K))  &kp LA(LG(R))  &kp LA(LG(T))    &kp LG(F)             &kp LS(LA(F8))  &kp LS(LA(F9))  &kp LS(LA(F10))  &kp LS(LA(F11))
+        &kp LA(LG(F))  &kp LS(LG(H))  &kp LS(LG(J))  &kp LS(LG(L))  &kp LA(LG(Y))    &kp LS(LG(UP_ARROW))  &kp LC(F1)      &kp LC(F2)      &kp LC(F3)       &kp LC(F4)
+&trans  &trans         &kp LC(LG(K))  &kp LC(LG(H))  &kp LG(LC(L))  &kp LC(LG(J))    &kp LS(LG(DOWN))      &kp LG(M)       &kp LA(F3)      &kp LG(LC(A))    &trans           &trans
+                                      &kp LG(ENTER)  &trans         &kp LG(J)        &trans                &trans          &kp LG(ENTER)
             >;
         };
 
         Shortcuts {
             bindings = <
-        &kp LS(DEL)    &kp LC(W)  &kp LC(LS(I))  &kp LS(LC(R))  &kp LC(T)                          &kp LC(MINUS)  &kp LC(D)  &kp LC(N)          &kp LS(LC(M))  &kp LC(MINUS)
-        &kp LS(LC(K))  &kp LC(L)  &kp LC(S)      &kp LC(A)      &kp LC(F)                          &kp LC(EQUAL)  &kp LC(P)  &kp LS(LA(LC(E)))  &kp LC(O)      &kp LC(PLUS)
-&trans  &kp LA(F8)     &kp LA(Z)  &kp LC(G)      &kp LC(R)      &kp LC(H)                          &kp LC(B)      &kp LC(I)  &kp LC(U)          &kp LS(LC(X))  &kp LC(Q)    &trans
-                                           &trans         &trans     &trans    &kp LC(LALT)  &kp LC(LS(V))  &kp LC(V)
+        &kp LS(DEL)    &kp LC(W)  &kp LC(LS(I))  &kp LS(LC(R))  &kp LC(T)    &kp LC(MINUS)  &kp LC(D)      &kp LC(N)          &kp LS(LC(M))  &kp LC(MINUS)
+        &kp LS(LC(K))  &kp LC(L)  &kp LC(S)      &kp LC(A)      &kp LC(F)    &kp LC(EQUAL)  &kp LC(P)      &kp LS(LA(LC(E)))  &kp LC(O)      &kp LC(PLUS)
+&trans  &kp LA(F8)     &kp LA(Z)  &kp LC(G)      &kp LC(R)      &kp LC(H)    &kp LC(B)      &kp LC(I)      &kp LC(U)          &kp LS(LC(X))  &kp LC(Q)      &trans
+                                  &trans         &trans         &trans       &kp LC(LALT)   &kp LC(LS(V))  &kp LC(V)
             >;
         };
 
         Mouse {
             bindings = <
-        &trans        &sk LC(LALT)  &sk LS(LA(LCTRL))  &sk LS(LCTRL)  &trans                    &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans
-        &kp LEFT_GUI  &kp LALT      &sk LCTRL          &sk LSHFT      &trans                    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
-&trans  &mo 8         &trans        &trans             &trans         &trans                    &trans          &msc SCRL_LEFT  &mkp MCLK       &msc SCRL_RIGHT  &trans &trans
-                                                 &trans         &trans  &trans    &trans  &trans          &trans
+        &trans        &sk LC(LALT)  &sk LS(LA(LCTRL))  &sk LS(LCTRL)  &trans    &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &trans
+        &kp LEFT_GUI  &kp LALT      &sk LCTRL          &sk LSHFT      &trans    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans
+&trans  &mo 8         &trans        &trans             &trans         &trans    &trans          &msc SCRL_LEFT  &mkp MCLK       &msc SCRL_RIGHT  &trans  &trans
+                                    &trans             &trans         &trans    &trans          &trans          &trans
             >;
         };
 
         Fadein {
             bindings = <
-        &trans  &trans  &trans  &trans     &trans                                 &trans          &trans          &trans  &trans  &trans
-        &trans  &trans  &trans  &en_tenge  &en_mngt                               &en_emdash      &en_endash      &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &en_quex   &trans                                 &en_hyperminus  &en_figuredash  &trans  &trans  &trans    &trans
-                          &en_rdq    &en_ldq   &spaced_en_emdash    &trans  &trans          &trans
+        &trans  &trans  &trans   &trans     &trans               &trans          &trans          &trans  &trans  &trans
+        &trans  &trans  &trans   &en_tenge  &en_mngt             &en_emdash      &en_endash      &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &en_quex   &trans               &en_hyperminus  &en_figuredash  &trans  &trans  &trans  &trans
+                        &en_rdq  &en_ldq    &spaced_en_emdash    &trans          &trans          &trans
             >;
         };
 
         Fadeinru {
             bindings = <
-        &trans  &trans  &trans  &trans     &trans                                 &trans          &trans          &trans  &trans  &trans
-        &trans  &trans  &trans  &ru_tenge  &ru_mngt                               &ru_emdash      &ru_endash      &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &ru_quex   &trans                                 &ru_hypenminus  &ru_figuredash  &trans  &trans  &trans    &trans
-                          &ru_rdq    &ru_ldq   &spaced_ru_emdash    &trans  &trans          &trans
+        &trans  &trans  &trans   &trans     &trans               &trans          &trans          &trans  &trans  &trans
+        &trans  &trans  &trans   &ru_tenge  &ru_mngt             &ru_emdash      &ru_endash      &trans  &trans  &trans
+&trans  &trans  &trans  &trans   &ru_quex   &trans               &ru_hypenminus  &ru_figuredash  &trans  &trans  &trans  &trans
+                        &ru_rdq  &ru_ldq    &spaced_ru_emdash    &trans          &trans          &trans
             >;
         };
 
         unicode {
             bindings = <
-        &kp RA(Q)    &kp RA(E)  &kp RA(F)  &kp RA(P)  &kp RA(I)                               &kp RA(D)  &kp RA(A)  &kp RA(Y)         &kp RA(R)      &kp RA(V)
-        &kp RA(H)    &kp RA(B)  &kp RA(J)  &kp LSHFT  &kp RS(RA(NUMBER_6))                    &kp RA(U)  &kp LSHFT  &kp RA(C)         &kp RA(W)      &kp RA(K)
-&trans  &kp RA(SQT)  &kp RA(S)  &kp RA(O)  &kp RA(Z)  &kp RA(LS(NUMBER_3))                    &kp RA(G)  &kp BSPC   &kp RA(NUMBER_8)  &kp RA(SLASH)  &kp RA(EQUAL)  &trans
-                                     &trans     &trans                &trans    &trans  &trans     &trans
+        &kp RA(Q)    &kp RA(E)  &kp RA(F)  &kp RA(P)  &kp RA(I)               &kp RA(D)  &kp RA(A)  &kp RA(Y)         &kp RA(R)      &kp RA(V)
+        &kp RA(H)    &kp RA(B)  &kp RA(J)  &kp LSHFT  &kp RS(RA(NUMBER_6))    &kp RA(U)  &kp LSHFT  &kp RA(C)         &kp RA(W)      &kp RA(K)
+&trans  &kp RA(SQT)  &kp RA(S)  &kp RA(O)  &kp RA(Z)  &kp RA(LS(NUMBER_3))    &kp RA(G)  &kp BSPC   &kp RA(NUMBER_8)  &kp RA(SLASH)  &kp RA(EQUAL)  &trans
+                                &trans     &trans     &trans                  &trans     &trans     &trans
             >;
         };
     };
