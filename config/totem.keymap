@@ -1808,7 +1808,7 @@
               &kp J  &kp Y      &kp A      &kp U         &gr_minus     &kp Q       &kp G  &kp N       &kp F  &kp K
               &kp H  &kp I      &kp O      &kp E         &gr_dot_en    &kp P       &kp D  &kp R       &kp S  &kp M
 &kp C_VOL_DN  &kp X  &gr_under  &gr_quote  &gr_comma_en  &gr_slash     &kp B       &kp C  &kp L       &kp W  &kp V  &kp C_VOLUME_UP
-                                &kc LSHFT     &lt 4 SPACE  &lt 7 TAB     &mo 2  &kp T  &kp RSHFT
+                                &kp LSHFT     &lt 4 SPACE  &lt 7 TAB     &mo 2  &kp T  &kp RSHFT
             >;
         };
 
