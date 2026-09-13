@@ -30,6 +30,12 @@
 
 / {
     behaviors {
+        rus_caps_word: rus_caps_word {
+            compatible = "zmk,behavior-russian-capsword";
+            #binding-cells = <0>;
+            continue-list = <MINUS BACKSPACE DELETE>;
+        };
+
         swapper: swapper {
             compatible = "zmk,behavior-tri-state";
             label = "SWAPPER";
@@ -1269,6 +1275,13 @@
         cpswrd {
             bindings = <&caps_word>;
             key-positions = <35 34>;
+            layers = <0>
+        };
+        
+        cpswrd_ru {
+            bindings = <&rus_caps_word>;
+            key-positions = <35 34>;
+            layers = <1>
         };
 
         paste_text {
