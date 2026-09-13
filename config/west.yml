@@ -6,8 +6,6 @@ manifest:
       url-base: https://github.com/urob
     - name: dhruvinsh
       url-base: https://github.com/dhruvinsh
-    - name: graveric
-      url-base: https://github.com/graveric
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -20,6 +18,7 @@ manifest:
       remote: dhruvinsh
       revision: main
     - name: zmk-behavior-russian-capsword
-      remote: graveric
+      url: https://github.com/graveric/zmk-behavior-russian-capsword
+      revision: main
   self:
     path: config
