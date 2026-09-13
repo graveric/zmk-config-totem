@@ -1895,10 +1895,10 @@
         khronkite {
             label = "khrnkt";
             bindings = <
-        &kp LG(LA(Q))  &kp LA(LG(O))  &kp LS(LG(K))  &kp LA(LG(R))  &kp LA(LG(T))    &kp LG(F)             &kp LS(LA(F8))  &kp LS(LA(F9))  &kp LS(LA(F10))  &kp LS(LA(F11))
-        &kp LA(LG(F))  &kp LS(LG(H))  &kp LS(LG(J))  &kp LS(LG(L))  &kp LA(LG(Y))    &kp LS(LG(UP_ARROW))  &kp LC(F1)      &kp LC(F2)      &kp LC(F3)       &kp LC(F4)
-&trans  &trans         &kp LC(LG(K))  &kp LC(LG(H))  &kp LG(LC(L))  &kp LC(LG(J))    &kp LS(LG(DOWN))      &kp LG(M)       &kp LA(F3)      &kp LG(LC(A))    &trans           &trans
-                                      &kp LG(ENTER)  &trans         &kp LG(J)        &trans                &trans          &kp LG(ENTER)
+        &kp LG(LA(Q))  &kp LA(LG(O))  &kp LS(LG(K))  &kp LA(LG(R))  &kp LA(LG(T))    &kp LG(F)             &kp LS(LA(F8))    &kp LS(LA(F9))    &kp LS(LA(F10))   &kp LS(LA(F11))
+        &kp LA(LG(F))  &kp LS(LG(H))  &kp LS(LG(J))  &kp LS(LG(L))  &kp LA(LG(Y))    &kp LS(LG(UP_ARROW))  &kp LC(F1)        &kp LC(F2)        &kp LC(F3)        &kp LC(F4)
+&trans  &trans         &kp LC(LG(K))  &kp LC(LG(H))  &kp LG(LC(L))  &kp LG(D)        &kp LS(LG(DOWN))      &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &trans
+                                      &kp LG(ENTER)  &trans         &kp LG(J)        &trans                &trans            &kp LG(ENTER)
             >;
         };
 
